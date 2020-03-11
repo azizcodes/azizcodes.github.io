@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Layers Control Tutorial - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		#map {
+			width: 600px;
+			height: 400px;
+		}
+	</style>
+
+	
+</head>
+<body>
+<div id='map'></div>
+
+<script>
+	var cities = L.layerGroup();
+
+	//L.marker([43.710175, 7.261953]).bindPopup('This is Littleton, CO.').addTo(cities),
+	//L.marker([50.850346, 4.351721]).bindPopup('This is Denver, CO.').addTo(cities),
+	//L.marker([47.809490, 13.055010]).bindPopup('This is Aurora, CO.').addTo(cities),
+	//L.marker([48.208176, 16.373819]).bindPopup('This is Golden, CO.').addTo(cities);
+
+	L.marker([52.520008, 13.404954]).addTo(cities).bindPopup("<b>Berlin</b><br />I am a popup.").openPopup();
+	L.marker([55.755825, 37.617298]).addTo(cities).bindPopup("<b>Moscow</b><br />I am a popup.").openPopup();
+	//L.marker([51.5, -0.09]).addTo(cities).bindPopup("<b>London</b><br />I am a popup.").openPopup();
+	L.marker([52.229675, 21.012230]).addTo(cities).bindPopup("<b>Warsaw</b><br />I am a popup.").openPopup();
+	L.marker([50.075539, 14.437800]).addTo(cities).bindPopup("<b>Prague</b><br />I am a popup.").openPopup();
+	L.marker([48.135124, 11.581981]).addTo(cities).bindPopup("<b>Munich</b><br />I am a popup.").openPopup();
+	L.marker([50.264893, 19.023781]).addTo(cities).bindPopup("<b>Katowice</b><br />I am a popup.").openPopup();
+	//L.marker([50.264893, 19.023781]).addTo(cities).bindPopup("<b>Katowice</b><br />I am a popup.").openPopup(); add aushwitz
+	L.marker([47.497913, 19.040236]).addTo(cities).bindPopup("<b>Budapest</b><br />I am a popup.").openPopup();
+	L.marker([48.208176, 16.373819]).addTo(cities).bindPopup("<b>Vienna</b><br />I am a popup.").openPopup();
+	L.marker([47.809490, 13.055010]).addTo(cities).bindPopup("<b>Salzburg</b><br />I am a popup.").openPopup();
+	L.marker([50.850346, 4.351721]).addTo(cities).bindPopup("<b>Brussels</b><br />I am a popup.").openPopup();
+	L.marker([43.710175, 7.261953]).addTo(cities).bindPopup("<b>Nice</b><br />I am a popup.").openPopup();
+
+
+	var cities2 = L.layerGroup();
+
+
+	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
+		streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
+
+	var map = L.map('map', {
+		center: [39.73, -104.99],
+		zoom: 10,
+		layers: [grayscale, cities]
+	});
+
+	var baseLayers = {
+		"Grayscale": grayscale,
+		"Streets": streets
+	};
+
+
+
+         // create a red polyline from an array of LatLng points
+       
+         var latlngs = [
+                 [55.755825, 37.617298],
+                 [52.520008, 13.404954],
+                 [50.075539, 14.437800],
+                 [52.229675, 21.012230],
+                 [50.264893, 19.023781],
+	             [47.497913, 19.040236],
+	             [48.208176, 16.373819],
+	             [47.809490, 13.055010],
+	             [48.135124, 11.581981],
+	             [52.520008, 13.404954],
+	             [50.850346, 4.351721],
+	             [43.710175, 7.261953]
+                  ];
+       
+          var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+
+          // zoom the map to the polyline
+
+           map.fitBounds(polyline.getBounds());
+
+	var overlays = {
+		"Cities": cities, "Cities2": cities2, "Trip":polyline
+	};
+
+	L.control.layers(baseLayers, overlays).addTo(map);
+
+
+</script>
+
+</body>
+</html>

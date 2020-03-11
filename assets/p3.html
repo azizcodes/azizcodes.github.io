@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>zir</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level1">
+
+<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
+<section data-background-image="salem.jpeg" data-background-size="1000px">
+<div style="font-family: &#39;Aref Ruqaa&#39;, serif;font-size: 80px;">
+الزير سالم
+</div>
+</section>
+</section>
+<section id="section" class="slide level1">
+<h1></h1>
+<h2 id="adding-an-image">Adding An Image</h2>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;section</span><span class="ot"> data-background-image=</span><span class="st">&quot;salem.jpeg&quot;</span><span class="ot"> data-background-size=</span><span class="st">&quot;1000px&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/section&gt;</span></code></pre></div>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<p>Could have started with some YAML, e.g.</p>
+<pre><code>---
+title: الزير سالم
+date: June 21, 2017
+---
+</code></pre>
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<p>if you ignore the front matter like I did here you need to specify metadata:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> -t revealjs -s -o p3.html p3.md -V revealjs-url=./reveal.js -V theme=black -V transition=fade --metadata pagetitle=<span class="st">&quot;zir&quot;</span></code></pre></div>
+<p><code>./revealjs</code> is a subfolder from where this webpage exists</p>
+</section>
+<section id="section-3" class="slide level1">
+<h1></h1>
+<p dir="rtl" lang="ar" style="color:#ff0000;font-size:20px;">
+التحكم بالنص العربي ليس سهلا
+</p>
+<p dir="rtl" lang="ar" style="color:#ff0000;font-size:20px;">
+خذ مثلًا النص التالي:
+</p>
+<h4 dir="rtl" lang="ar" style="color:#ff0000;">
+المادة التاسعة:
+</h4>
+<p dir="rtl" lang="ar" style="color:#ff0000;font-size:20px;">
+أي زواج يتبين لدى الجهة المختصة مخالفته للأحكام السابقة يترتب عليه ما يلي
+</p>
+<ol lang="ar" style="list-style-type:arabic-indic ;direction:RTL; text-align: right; color:#ff0000;font-size:20px;">
+<li>
+محاكمة المتزوج تأديبيًا لدى ديون المظالم
+</li>
+<li>
+عدم توثيق الزواج من قبل الجهات المختصة السعودية
+</li>
+<li>
+عدم السماح بدخول الزوجة أو الزوج الأجنبي إلى المملكة وإنهاء إقامتهما إذا كانا مقيمين داخل المملكة
+</li>
+</ol>
+<p dir="rtl" lang="ar" style="color:#ff0000;font-size:20px;">
+ذلك بما عصوا و كانوا يعتدون
+</p>
+</section>
+<section id="section-4" class="slide level1">
+<h1></h1>
+<p>و هنا الكود الذي ولد النص السابق</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> dir=</span><span class="st">&quot;rtl&quot;</span><span class="ot"> lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> style=</span><span class="st">&quot;color:#ff0000;font-size:20px;&quot;</span><span class="kw">&gt;</span>التحكم بالنص العربي ليس سهلا<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;p</span><span class="ot"> dir=</span><span class="st">&quot;rtl&quot;</span><span class="ot"> lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> style=</span><span class="st">&quot;color:#ff0000;font-size:20px;&quot;</span><span class="kw">&gt;</span>خذ مثلًا التالي:<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;h4</span><span class="ot"> dir=</span><span class="st">&quot;rtl&quot;</span><span class="ot"> lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> style=</span><span class="st">&quot;color:#ff0000;&quot;</span><span class="kw">&gt;</span>المادة التاسعة:<span class="kw">&lt;/h4&gt;</span>
+<span class="kw">&lt;p</span><span class="ot"> dir=</span><span class="st">&quot;rtl&quot;</span><span class="ot"> lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> style=</span><span class="st">&quot;color:#ff0000;font-size:20px;&quot;</span><span class="kw">&gt;</span>
+أي زواج يتبين لدى الجهة المختصة مخالفته للأحكام السابقة يترتب عليه ما يلي
+<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;ol</span><span class="ot"> lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> style=</span><span class="st">&quot;list-style-type:arabic-indic ;direction:RTL; text-align: right; color:#ff0000;font-size:20px;&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;li&gt;</span>محاكمة المتزوج تأديبيًا لدى ديون المظالم<span class="kw">&lt;/li&gt;</span>
+<span class="kw">&lt;li&gt;</span>عدم توثيق الزواج من قبل الجهات المختصة السعودية<span class="kw">&lt;/li&gt;</span>
+<span class="kw">&lt;li&gt;</span>عدم السماح بدخول الزوجة أو الزوج الأجنبي إلى المملكة وإنهاء إقامتهما إذا كانا مقيمين داخل المملكة <span class="kw">&lt;/li&gt;</span>
+<span class="kw">&lt;/ol&gt;</span>
+<span class="kw">&lt;p</span><span class="ot"> dir=</span><span class="st">&quot;rtl&quot;</span><span class="ot"> lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> style=</span><span class="st">&quot;color:#ff0000;font-size:20px;&quot;</span><span class="kw">&gt;</span>
+ذلك بما عصوا و كانوا يعتدون
+<span class="kw">&lt;/p&gt;</span></code></pre></div>
+</section>
+<section id="section-5" class="slide level1">
+<h1></h1>
+<p style="direction:rtl;lang:ar;color:#ff0000;font-size:20px;">
+مرة أخرى:
+</p>
+<p style="direction:rtl;lang:ar;color:#ff0000;font-size:20px;">
+هل يجوز هذا يا شيخ؟ أم أنه ظلم؟
+</p>
+<p style="direction:rtl;lang:ar;color:#ff0000;font-size:20px;">
+و شكرًا
+</p>
+</section>
+<section id="section-6" class="slide level1">
+<h1></h1>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;direction:rtl;lang:ar;color:#ff0000;font-size:20px;&quot;</span><span class="kw">&gt;</span>
+مرة أخرى:<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;direction:rtl;lang:ar;color:#ff0000;font-size:20px;&quot;</span><span class="kw">&gt;</span>هل يجوز هذا يا شيخ؟ أم أنه ظلم؟<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;direction:rtl;lang:ar;color:#ff0000;font-size:20px;&quot;</span><span class="kw">&gt;</span>و شكرًا<span class="kw">&lt;/p&gt;</span></code></pre></div>
+</section>
+<section id="section-7" class="slide level1">
+<h1></h1>
+<blockquote>
+<p>The presentation markup hierarchy needs to be <code>.reveal &gt; .slides &gt; section</code> where the <code>section</code> represents one slide and can be repeated indefinitely. If you place multiple <code>section</code> elements inside of another <code>section</code> they will be shown as vertical slides. The first of the vertical slides is the &quot;root&quot; of the others (at the top), and will be included in the horizontal sequence. --Hakim Hattab</p>
+</blockquote>
+</section>
+<section id="section-8" class="slide level1">
+<h1></h1>
+<p>Let's see this in action..</p>
+</section>
+<section id="section-9" class="slide level1">
+<h1><a href="#" class="navigate-down enabled"><img width="78" height="138" alt="Down arrow" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-lazy-loaded=""></a></h1>
+<h4 dir="rtl" lang="ar" style="color:#ff0000;">
+المادة التاسعة:
+</h4>
+<p dir="rtl" lang="ar" style="color:#ff0000;font-size:20px;">
+أي زواج يتبين لدى الجهة المختصة مخالفته للأحكام السابقة يترتب عليه ما يلي
+</p>
+<p>
+<br>
+</p>
+<section data-transition="slide">
+<br>
+<ol start="1" lang="ar" style="list-style-type:arabic-indic ;direction:RTL; text-align: right; color:#ff0000;font-size:20px;">
+<li>
+محاكمة المتزوج تأديبيًا لدى ديوان المظالم
+</li>
+</ol>
+</section>
+<section data-transition="slide">
+<br>
+<ol start="2" lang="ar" style="list-style-type:arabic-indic ;direction:RTL; text-align: right; color:#ff0000;font-size:20px;">
+<li>
+عدم توثيق الزواج من قبل الجهات المختصة السعودية
+</li>
+</ol>
+</section>
+<section data-transition="slide">
+<br>
+<ol start="3" lang="ar" style="list-style-type:arabic-indic ;direction:RTL; text-align: right; color:#ff0000;font-size:20px;">
+<li>
+عدم السماح بدخول الزوجة أو الزوج الأجنبي إلى المملكة وإنهاء إقامتهما إذا كانا مقيمين داخل المملكة
+</li>
+</ol>
+</section>
+</section>
+<section id="section-10" class="slide level1">
+<h1></h1>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;h4</span><span class="ot"> dir=</span><span class="st">&quot;rtl&quot;</span><span class="ot"> lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> style=</span><span class="st">&quot;color:#ff0000;&quot;</span><span class="kw">&gt;</span>المادة التاسعة:<span class="kw">&lt;/h4&gt;</span>
+<span class="kw">&lt;p</span><span class="ot"> dir=</span><span class="st">&quot;rtl&quot;</span><span class="ot"> lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> style=</span><span class="st">&quot;color:#ff0000;font-size:20px;&quot;</span><span class="kw">&gt;</span>
+أي زواج يتبين لدى الجهة المختصة مخالفته للأحكام السابقة يترتب عليه ما يلي
+<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;section</span><span class="ot"> data-transition=</span><span class="st">&quot;slide&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/section&gt;</span>
+<span class="kw">&lt;section</span><span class="ot"> data-transition=</span><span class="st">&quot;slide&quot;</span><span class="kw">&gt;</span>2<span class="kw">&lt;/section&gt;</span>
+<span class="kw">&lt;section</span><span class="ot"> data-transition=</span><span class="st">&quot;slide&quot;</span><span class="kw">&gt;</span>3<span class="kw">&lt;/section&gt;</span></code></pre></div>
+</section>
+<section id="section-11" class="slide level1">
+<h1></h1>
+<section data-background-image="salem.jpeg" data-background-size="1000px">
+</section>
+</section>
+<section id="section-12" class="slide level1">
+<h1></h1>
+<a href="#" class="navigate-down enabled"><img width="78" height="138" alt="Down arrow" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-lazy-loaded=""></a>
+<section data-transition="slide">
+يقول الزير أبو ليلى المهلهل
+</section>
+<section data-transition="slide">
+<p dir="rtl" lang="ar">
+و قلب الزير قاسي ما يلينا ..
+</p>
+</section>
+<section data-transition="slide-in fade-out">
+<p dir="rtl" lang="ar">
+و ان لان الحديد ما لان قلبي ..
+</p>
+</section>
+</section>
+<section id="section-13" class="slide level1">
+<h1></h1>
+<p dir="rtl" lang="ar" class="fragment" data-fragment-index="1">
+و ان لان..
+</p>
+<p dir="rtl" lang="ar" class="fragment" data-fragment-index="2">
+الحديد..
+</p>
+<p dir="rtl" lang="ar" style="color:red;font-size:60px;font-family:'Aref Ruqaa'" class="fragment" data-fragment-index="3">
+ما لان قلبي!
+</p>
+</section>
+<section id="section-14" class="slide level1">
+<h1></h1>
+<section data-background-image="salem.jpeg" data-background-size="1000px">
+</section>
+</section>
+<section id="section-15" class="slide level1">
+<h1></h1>
+<h2 id="transitions">Transitions</h2>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;section</span><span class="ot"> data-transition=</span><span class="st">&quot;slide&quot;</span><span class="kw">&gt;</span>
+يقول الزير أبو ليلى المهلهل
+<span class="kw">&lt;/section&gt;</span>
+<span class="kw">&lt;section</span><span class="ot"> data-transition=</span><span class="st">&quot;slide&quot;</span><span class="kw">&gt;</span>
+و قلب الزير قاسي ما يلينا ..
+<span class="kw">&lt;/section&gt;</span>
+<span class="kw">&lt;section</span><span class="ot"> data-transition=</span><span class="st">&quot;slide-in fade-out&quot;</span><span class="kw">&gt;</span>
+و ان لان الحديد ما لان قلبي ..
+<span class="kw">&lt;/section&gt;</span></code></pre></div>
+</section>
+<section id="section-16" class="slide level1">
+<h1></h1>
+<div style="font-family: &#39;Aref Ruqaa&#39;, serif;font-size: 80px;">
+و سلامتكم
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/lib/js/head.min.js"></script>
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+              { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

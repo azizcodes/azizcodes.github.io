@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level1">
+<h1></h1>
+Line
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<div id="tester" style="width:1100px;height:600px;">
+
+</div>
+<script>
+    TESTER = document.getElementById('tester');
+    Plotly.plot( TESTER, [{
+    x: [1, 2, 3, 4, 5],
+    y: [1, 2, 4, 8, 16] }], {}, {responsive: true});
+</script>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+Bar
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<div id="myDiv">
+<!-- Plotly chart will be drawn inside this DIV -->
+</div>
+<script>
+var trace1 = {
+    type: 'bar',
+    x: [1, 2, 3, 4],
+    y: [5, 10, 2, 8],
+    marker: {
+        color: '#C8A2C8',
+        line: {
+            width: 2.5
+        }
+    }
+};
+var data = [ trace1 ];
+var layout = { 
+  font: {size: 18}
+};
+
+Plotly.newPlot('myDiv', data, layout, {responsive: true});
+</script>
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<div style="float:center; margin-right:100px;">
+<p>
+Pie
+</p>
+</div>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+<div id="myDiv1" align="center">
+<!-- Plotly chart will be drawn inside this DIV -->
+</div>
+<script>
+var data = [{
+  values: [19, 26, 55],
+  labels: ['Residential', 'Non-Residential', 'Utility'],
+  type: 'pie'
+}];
+
+Plotly.newPlot('myDiv1', data, {}, {responsive: true});
+</script>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/lib/js/head.min.js"></script>
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+              { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

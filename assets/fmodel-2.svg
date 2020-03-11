@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="svg17857"
+   viewBox="0 0 1059.4488 740.55119"
+   height="209mm"
+   width="299mm">
+  <defs
+     id="defs17859">
+    <marker
+       style="overflow:visible"
+       id="marker13622"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="scale(-0.6,-0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path13624" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker15868"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="scale(-0.6,-0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path15870" />
+    </marker>
+    <linearGradient
+       y2="554.16315"
+       x2="321.36877"
+       y1="554.16315"
+       x1="156.15042"
+       gradientTransform="matrix(1.5221258,0,0,1.5221258,261.40485,-84.031445)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6622"
+       xlink:href="#linearGradient4250" />
+    <linearGradient
+       id="linearGradient4250">
+      <stop
+         id="stop4252"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         id="stop4254"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(1.5221258,0,0,1.5221258,-15.622042,-82.50931)"
+       y2="554.16315"
+       x2="321.36877"
+       y1="554.16315"
+       x1="156.15042"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6620"
+       xlink:href="#linearGradient4250" />
+    <marker
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker15414"
+       style="overflow:visible">
+      <path
+         id="path15416"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="554.16315"
+       x2="321.36877"
+       y1="554.16315"
+       x1="156.15042"
+       id="linearGradient4262"
+       xlink:href="#linearGradient4250"
+       gradientTransform="matrix(1.5221258,0,0,1.5221258,-14.099917,-269.7308)" />
+    <linearGradient
+       gradientTransform="matrix(1.5221258,0,0,1.5221258,262.92698,-271.2529)"
+       y2="554.16315"
+       x2="321.36877"
+       y1="554.16315"
+       x1="156.15042"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6614"
+       xlink:href="#linearGradient4250" />
+  </defs>
+  <metadata
+     id="metadata17862">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-311.81101)"
+     id="layer1">
+    <rect
+       y="466.10226"
+       x="192.67505"
+       height="403.13589"
+       width="589.03638"
+       id="rect3348"
+       style="opacity:0.57160022;fill:#ffffff;fill-opacity:1;stroke:#008000;stroke-width:2.58920121;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="493.06326"
+       x="502.12967"
+       height="158.37976"
+       width="248.43883"
+       id="rect6612"
+       style="opacity:0.57160022;fill:url(#linearGradient6614);fill-opacity:1;stroke:#000000;stroke-width:3.04425144;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:0.57160022;fill:url(#linearGradient4262);fill-opacity:1;stroke:#000000;stroke-width:3.04425144;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4152"
+       width="248.43883"
+       height="158.37976"
+       x="225.1028"
+       y="494.58539" />
+    <path
+       id="path4162"
+       d="m 35.1194,669.04186 168.40649,-2.21141"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6.16917562;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker15414)" />
+    <flowRoot
+       transform="matrix(1.5221258,0,0,1.5221258,1023.9898,-114.47396)"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4210"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4212"><rect
+           y="419.36221"
+           x="-313"
+           height="59.999969"
+           width="59"
+           id="rect4214" /></flowRegion><flowPara
+         style="font-size:40px"
+         id="flowPara4216">2</flowPara></flowRoot>    <flowRoot
+       transform="matrix(1.5221258,0,0,1.5221258,754.57359,-111.42971)"
+       xml:space="preserve"
+       id="flowRoot4218"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion4220"><rect
+           id="rect4222"
+           width="59"
+           height="59.999969"
+           x="-313"
+           y="419.36221" /></flowRegion><flowPara
+         id="flowPara4224"
+         style="font-size:40px">1</flowPara></flowRoot>    <rect
+       y="681.80682"
+       x="223.58067"
+       height="158.37976"
+       width="248.43883"
+       id="rect6616"
+       style="opacity:0.57160022;fill:url(#linearGradient6620);fill-opacity:1;stroke:#000000;stroke-width:3.04425144;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4226"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(1.5221258,0,0,1.5221258,754.57359,83.402386)"><flowRegion
+         id="flowRegion4228"><rect
+           id="rect4230"
+           width="59"
+           height="59.999969"
+           x="-313"
+           y="419.36221" /></flowRegion><flowPara
+         id="flowPara4232"
+         style="font-size:40px">3</flowPara></flowRoot>    <rect
+       style="opacity:0.57160022;fill:url(#linearGradient6622);fill-opacity:1;stroke:#000000;stroke-width:3.04425144;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6618"
+       width="248.43883"
+       height="158.37976"
+       x="500.60757"
+       y="680.28467" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4242"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(1.5221258,0,0,1.5221258,1025.512,77.313887)"><flowRegion
+         id="flowRegion4244"><rect
+           id="rect4246"
+           width="59"
+           height="59.999969"
+           x="-313"
+           y="419.36221" /></flowRegion><flowPara
+         id="flowPara4248"
+         style="font-size:40px">4</flowPara></flowRoot>    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6.16917562;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker15868)"
+       d="m 769.46021,665.4436 168.4065,-2.2114"
+       id="path7274" />
+  </g>
+</svg>

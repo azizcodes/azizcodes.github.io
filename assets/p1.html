@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Azizcodes">
+  <title>zir</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Revealjs with Pandoc</h1>
+  <p class="author">Azizcodes</p>
+  <p class="date">May 6, 2019</p>
+</section>
+
+<section id="section" class="slide level1">
+<h1></h1>
+<h2>
+Conversion from Markdown
+</h2>
+<p>No need to download the resources locally, just use</p>
+<pre><code>pandoc -t revealjs -s -o myslides.html myslides.md -V revealjs-url=https://revealjs.com</code></pre>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<h2 id="conversion-from-markdown">Conversion from Markdown</h2>
+<p>Set the file name in bash</p>
+<pre><code>p1=&quot;p1&quot;</code></pre>
+<p>Then</p>
+<pre><code>a=&quot;pandoc -t revealjs -s -o myslides.html myslides.md -V revealjs-url=https://revealjs.com&quot;
+echo ${a//myslides/$p1} # to view the output   
+${a//myslides/$p1}      # to execute the output</code></pre>
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<h2 id="images">Images</h2>
+<h4 id="background-image">Background image</h4>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;section</span><span class="ot"> data-background-image=</span><span class="st">&quot;http://example.com/image.png&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;h2&gt;</span>Image<span class="kw">&lt;/h2&gt;</span>
+<span class="kw">&lt;/section&gt;</span></code></pre></div>
+<h4 id="repeat">+repeat</h4>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;section</span><span class="ot"> data-background-image=</span><span class="st">&quot;http://example.com/image.png&quot;</span><span class="ot"> data-background-size=</span><span class="st">&quot;100px&quot;</span><span class="ot"> data-background-repeat=</span><span class="st">&quot;repeat&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;h2&gt;</span>This background image will be sized to 100px and repeated<span class="kw">&lt;/h2&gt;</span>
+<span class="kw">&lt;/section&gt;</span></code></pre></div>
+</section>
+<section id="section-3" class="slide level1">
+<h1></h1>
+<h2 id="equations">Equations</h2>
+<h4 id="question">Question:</h4>
+<p>What happens when we add <code>$$e^{i\pi}+1=0$$</code> to the markdown source file?</p>
+</section>
+<section id="section-4" class="slide level1">
+<h1></h1>
+<h2 id="equations-1">Equations</h2>
+<h4 id="answer">Answer:</h4>
+<p>It gets converted to an equation using MathJax..</p>
+<p><br /><span class="math display"><em>e</em><sup><em>i</em><em>π</em></sup> + 1 = 0</span><br /></p>
+</section>
+<section id="section-5" class="slide level1">
+<h1></h1>
+<h2 id="tables">Tables</h2>
+<p>Open a python interpretor and paste the following</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> pandas <span class="im">import</span> DataFrame
+
+x<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]
+x2<span class="op">=</span>[<span class="dv">2</span><span class="op">*</span>j <span class="cf">for</span> j <span class="kw">in</span> x]
+x3<span class="op">=</span>[<span class="dv">3</span><span class="op">*</span>j <span class="cf">for</span> j <span class="kw">in</span> x]
+df<span class="op">=</span>DataFrame({<span class="st">&#39;x&#39;</span>:x,<span class="st">&#39;2x&#39;</span>:x2,<span class="st">&#39;3x&#39;</span>:x3},columns<span class="op">=</span>[<span class="st">&#39;x&#39;</span>,<span class="st">&#39;2x&#39;</span>,<span class="st">&#39;3x&#39;</span>])
+<span class="bu">print</span>(df.to_html(index<span class="op">=</span><span class="va">False</span>))</code></pre></div>
+<p>Copy the output and paste it where the table should go.</p>
+</section>
+<section id="section-6" class="slide level1">
+<h1></h1>
+<h4 id="tables-1">Tables</h4>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>
+x
+</th>
+<th>
+2x
+</th>
+<th>
+3x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+4
+</td>
+<td>
+6
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+6
+</td>
+<td>
+9
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="section-7" class="slide level1">
+<h1></h1>
+<h2 id="color">Color</h2>
+<p>Prepare to get your eyes hurt..</p>
+<pre><code>&lt;section data-background-color=&quot;#ff0000&quot;&gt;
+  &lt;h2&gt;Color&lt;/h2&gt;
+&lt;/section&gt;</code></pre>
+</section>
+<section id="section-8" class="slide level1">
+<h1></h1>
+<section data-background-color="#ff0000">
+<h2>
+اللون الأحمر
+</h2>
+<p>
+This is a custom slide, written in HTML.
+</p>
+</section>
+</section>
+<section id="section-9" class="slide level1">
+<h1></h1>
+<blockquote>
+<p>The trouble with the world is that the stupid are cocksure and the intelligent are full of doubt. - Bertrand Russell</p>
+</blockquote>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/lib/js/head.min.js"></script>
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+              { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

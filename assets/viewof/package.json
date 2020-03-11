@@ -1,0 +1,14 @@
+{
+  "name": "@azizcodes/viewof",
+  "main": "@azizcodes/viewof.js",
+  "version": "431.0.0",
+  "homepage": "https://observablehq.com/@azizcodes/viewof",
+  "author": {
+    "name": "azizcodes",
+    "url": "https://observablehq.com/@azizcodes"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
