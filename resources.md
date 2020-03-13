@@ -3,12 +3,16 @@ layout: page
 title: Resources
 permalink: /resources/
 ---
-## Books
-* From the [E-book foundation](https://github.com/EbookFoundation)
-
+## Programming Books
+* Large collection from the [E-book foundation](https://github.com/EbookFoundation)
 
 ## Communities
 * [r/selfhosted](https://www.reddit.com/r/selfhosted/)
+
+## Mediawiki
+* [Working with Mediawiki](http://workingwithmediawiki.com/book/foreword.html)
+
+
 
 ## Linux and Bash
 
