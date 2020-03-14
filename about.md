@@ -7,7 +7,7 @@ permalink: /about/
 <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet"> 
 <div style="font-family: 'Homemade Apple', cursive;font-size: 40px;  text-align: center;">AzizCodes</div>
 <br>
-This a learning blog. A place where I collect pieces of information I get from stackoverflow and other programming websites and books. I hope you find this blog useful!
+This a learning blog. A place where I collect pieces of information I get from stackoverflow and other programming websites and books. I hope you find this blog useful.
 <br>
 <div style="text-align: center;">Blogging since 2018 from Riyadh, KSA.</div>
 
