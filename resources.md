@@ -9,10 +9,15 @@ permalink: /resources/
 ## Communities
 * [r/selfhosted](https://www.reddit.com/r/selfhosted/)
 
-## Data
+## Data Sources
 * From [another Aziz](https://www.aziz-blog.com/?page_id=11103)
 
-## Mediawiki
+## Programs
+
+### Postgres
+* [Documentation](http://www.faqs.org/docs/ppbook/book1.htm)
+
+### Mediawiki
 * [Working with Mediawiki](http://workingwithmediawiki.com/book/foreword.html)
 
 ## Linux and Bash
@@ -34,10 +39,10 @@ permalink: /resources/
 * [Scrapy](https://docs.scrapy.org/en/latest/)
 
 ### Maps
-* [Folium]()
+* [Folium](https://python-visualization.github.io/folium/)
 
 ### Databases
-* [SqlAlchemy]()
+* [SqlAlchemy](https://www.sqlalchemy.org/)
 
 ### Plotly and Dash
 
