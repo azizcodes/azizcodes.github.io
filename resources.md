@@ -9,10 +9,11 @@ permalink: /resources/
 ## Communities
 * [r/selfhosted](https://www.reddit.com/r/selfhosted/)
 
+## Data
+* From [another Aziz](https://www.aziz-blog.com/?page_id=11103)
+
 ## Mediawiki
 * [Working with Mediawiki](http://workingwithmediawiki.com/book/foreword.html)
-
-
 
 ## Linux and Bash
 
