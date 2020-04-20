@@ -131,6 +131,18 @@ Here is the table *long*
   </tbody>
 </table>
 
-😀
 
-🔚
+Want a JSON?
+
+``` python
+print(long.to_json(orient='records'))
+```
+
+The resule is below
+
+``` json
+[{"Person":"Bob","Variable":"Age","Value":"32"},{"Person":"Alice","Variable":"Age","Value":"24"},{"Person":"Steve","Variable":"Age","Value":"64"},{"Person":"Bob","Variable":"Weight","Value":"128"},{"Person":"Alice","Variable":"Weight","Value":"86"},{"Person":"Steve","Variable":"Weight","Value":"95"},{"Person":"Bob","Variable":"Height","Value":"180"},{"Person":"Alice","Variable":"Height","Value":"175"},{"Person":"Steve","Variable":"Height","Value":"165"}]
+```
+
+
+😀
