@@ -5,9 +5,11 @@ date: 2018-7-1
 categories: jekyll update
 ---
 
-First some info on [wide and long formats](https://en.wikipedia.org/wiki/Wide_and_narrow_data). Bascially, how to change from format to the other shown in the wikipedia page.
+First some info on [wide and long formats on Wikipedia](https://en.wikipedia.org/wiki/Wide_and_narrow_data). The subject of this post is how to switch from one format to the other.
 
-Why is that necessary? Well, some Javascript libraries require that the data be in the long format, for example. So here is how to do that. First let's GET the table
+Why is that necessary? 
+
+Well, for me it's software requirements. For example, some Javascript libraries require that the data be in the long format. So here is how to do that. First let's GET the table from Wikipedia
 
 ``` python
 import pandas as pd
@@ -16,9 +18,12 @@ t=pd.read_html(url)
 t0=t[0]
 t0_headers=t0.loc[0]
 wide = t0.drop(0)
+wide.columns=t0_headers
 ```
 
-Here is the table *wide*
+## Wide to Long
+
+Here is the table *in wide format*
 
 <table border="1" class="dataframe">
   <thead>
@@ -56,13 +61,12 @@ Here is the table *wide*
 </table>
 
 ``` python
-wide.columns=t0_headers
 long = pd.melt(wide,
         id_vars='Person',
         var_name='Variable', 
         value_name='Value')
 ```
-Here is the table *long*
+Here is the same table *in long format*
 
 <table border="1" class="dataframe">
   <thead>
@@ -144,5 +148,5 @@ The resule is below
 [{"Person":"Bob","Variable":"Age","Value":"32"},{"Person":"Alice","Variable":"Age","Value":"24"},{"Person":"Steve","Variable":"Age","Value":"64"},{"Person":"Bob","Variable":"Weight","Value":"128"},{"Person":"Alice","Variable":"Weight","Value":"86"},{"Person":"Steve","Variable":"Weight","Value":"95"},{"Person":"Bob","Variable":"Height","Value":"180"},{"Person":"Alice","Variable":"Height","Value":"175"},{"Person":"Steve","Variable":"Height","Value":"165"}]
 ```
 
-
-😀
+## Long to Wide
+Later. 😀

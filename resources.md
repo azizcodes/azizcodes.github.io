@@ -3,6 +3,13 @@ layout: page
 title: Resources
 permalink: /resources/
 ---
+
+## Emojis
+* [Full list](https://unicode.org/emoji/charts/emoji-released.html)
+
+## Articles
+* [Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well)
+
 ## Programming Books
 * Large collection from the [E-book foundation](https://github.com/EbookFoundation)
 
@@ -51,7 +58,7 @@ permalink: /resources/
 * [Dash Core Components](https://dash.plot.ly/dash-core-components/)
 
 ## HTML, CSS, and JavaScript
-
+* [Eloquent JavaScript](https://eloquentjavascript.net/index.html)
 * [Web technology for developers](https://developer.mozilla.org/en-US/docs/Web), [W3Schools](https://www.w3schools.com/)
   * [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
   * [CSS Box Model](https://www.w3schools.com/Css/css_boxmodel.asp).
@@ -72,7 +79,7 @@ permalink: /resources/
 * [revealjs](https://revealjs.com/#/)
   * [slides.com](https://slides.com/)
   * [GitHub Page](https://github.com/hakimel/reveal.js) 
-  * [ Using pandoc to produce reveal.js slides](https://github.com/jgm/pandoc/wiki/Using-pandoc-to-produce-reveal.js-slides)
+  * [Using pandoc to produce reveal.js slides](https://github.com/jgm/pandoc/wiki/Using-pandoc-to-produce-reveal.js-slides)
 * [timelinejs](https://timeline.knightlab.com/)
 * [leafletjs](https://leafletjs.com/)
 * Plotting  
