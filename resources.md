@@ -4,8 +4,14 @@ title: Resources
 permalink: /resources/
 ---
 
-## Emojis
-* [Full list](https://unicode.org/emoji/charts/emoji-released.html)
+## Unicode Charts
+* [Emojis full list](https://unicode.org/emoji/charts/emoji-released.html)
+* [Unicode charts](http://www.unicode.org/charts/#symbols)
+* [HTML Symbols](https://www.w3schools.com/html/html_symbols.asp)
+* [ASCII HTML Codes](https://ascii.cl/htmlcodes.htm)
+
+## Fonts
+* [Google Fonts](https://fonts.google.com/)
 
 ## Articles
 * [Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well)
