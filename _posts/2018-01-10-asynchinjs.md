@@ -9,7 +9,7 @@ Previously, I have discussed web scraping (fetching stuff) using Nokogiri or Pyt
 
 Why is this important? In the rails application I have been working on, the page was making too many requests prior to loading the page, which made loading the page slow. Since Javascript is *asynchronous*, however, I can load the page right away and then fetch what needs to be fetched and inserted into the page as the page loads.
 
-See an example [here](/assets/asyncjs/asyncjs.html) (and the code below). The program fetches the opening price for Yansab, Aramco, and Sabic from the Argaam website, asynchronously. Cool stuff.
+See an example [here](/assets/asyncjs.html) (and the code below). The program fetches the opening price for Yansab, Aramco, and Sabic from the Argaam website, asynchronously. Cool stuff.
 
 The code is below.
 
