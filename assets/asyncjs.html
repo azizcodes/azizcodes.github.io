@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<style type="text/css">
+	.xy {
+				background-color: yellow;
+						}
+</style>
+
+<body>
+
+	<div>yansab</div>
+	<div class="xx">
+			https://www.argaam.com/ar/company/companyoverview/marketid/3/companyid/88
+	</div>
+	<div>aramco</div>
+	<div class="xx">
+			https://www.argaam.com/ar/company/companyoverview/marketid/3/companyid/3509
+	</div>
+	<div>sabic</div>
+	<div class="xx">
+			https://www.argaam.com/ar/company/companyoverview/marketid/3/companyid/77
+	</div>
+
+	<script>
+		async function fetchPrice(url){
+			  let el=document.createElement('html'); 
+			  let txt=await fetch(url).then(d=>d.text());
+			  el.innerHTML=txt;
+			  let divs=el.getElementsByTagName('div');
+			  let i=[ ...divs].map(d=>d.className).findIndex(d=>d=='value');
+			  return divs[i].innerHTML;
+		};
+	</script>
+
+	<script>
+		async function f(){
+				var xx=document.getElementsByClassName('xx');
+
+				for (let i = 0; i < xx.length; i++) {
+							xx[i].innerHTML=await fetchPrice(xx[i].innerHTML);
+						};
+		};
+f();
+	</script>
+</body>
+</html>
