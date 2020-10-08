@@ -4,19 +4,17 @@ title:  "Javascript: Asynchronous Functions"
 date:   2018-07-06
 categories: jekyll update
 ---
-
-Previously, I have discussed web scraping (fetching stuff) using Nokogiri or Python's Requests in this blog. In this post, I show how this can be done using Javascript and the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). 
-
-Why is this important? In the rails application I have been working on, the page was making too many requests prior to loading the page, which made loading the page slow. Since Javascript is *asynchronous*, however, I can load the page right away and then fetch what needs to be fetched and inserted into the page as the page loads.
-
-See an example [here](/assets/asyncjs.html) (and the code below). The program fetches the opening price for Yansab, Aramco, and Sabic from the Argaam website, asynchronously. Cool stuff.
-
-The code is below.
-
 <div style="text-align: center">
-<iframe src="/assets/asyncjs.html" width='100%' height='400px'></iframe>
+<iframe src="/assets/asyncjs.html" width='100%' height='130px'></iframe>
 </div>
 
+Previously, I have discussed web scraping (fetching stuff) using curl, Nokogiri or Python's Requests in this blog. In this post, I show how this can be done using Javascript and the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). 
+
+Why is this important? In the rails application I have been working on, the page was making too many requests prior to loading the page, which made loading the page very slow. Since Javascript is *asynchronous*, however, I can load the page right away and then fetch what needs to be fetched and inserted into the page as the page loads.
+
+See an example [here](/assets/asyncjs.html). The program fetches the opening price for Yansab, Aramco, and Sabic from the Argaam website, asynchronously. Cool stuff.
+
+The code for this example is below.
 
 ```html
 <!DOCTYPE html>
