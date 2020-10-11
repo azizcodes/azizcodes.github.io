@@ -5,7 +5,7 @@ date:   2018-07-06
 categories: jekyll update
 ---
 <div style="text-align: center">
-<iframe src="/assets/asyncjs.html" width='100%' height='130px'></iframe>
+<iframe src="/assets/asyncjs.html" width='100%' height='150px'></iframe>
 </div>
 
 Previously, I have discussed web scraping (fetching stuff) using curl, Nokogiri or Python's Requests in this blog. In this post, I show how this can be done using Javascript and the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). 
