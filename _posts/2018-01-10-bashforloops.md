@@ -7,6 +7,17 @@ categories: jekyll update
 
 (Work in progress)
 
+
+## Summing a list of numbers
+```
+seq 10 | awk '{s+=$1} END {print s}'
+```
+
+## Reading long files
+```
+for k in {1..115}; do echo $k,$(($k+5)); done|column -t -s,|less
+```
+
 ## For Loops
 If you remember, I had underscores in the beginning of the post titles to mark scripts I wrote. After a while, I decided this was unncessary and actually ugly. However I had 44 posts. Here is how to edit them all at once.
 
