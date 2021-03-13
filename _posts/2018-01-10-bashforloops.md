@@ -8,6 +8,11 @@ categories: jekyll update
 (Work in progress)
 
 
+
+## Bash reference
+[Bash reference.](https://tldp.org/LDP/abs/html/refcards.html#AEN22728)
+
+
 ## Summing a list of numbers
 ```
 seq 10 | awk '{s+=$1} END {print s}'

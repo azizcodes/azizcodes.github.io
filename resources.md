@@ -38,7 +38,7 @@ permalink: /resources/
 * [The Linux Command Line](http://www.linuxcommand.org/tlcl.php), pdf available for free through that website. **A Great Book**.
 * [The Linux Documentation Project](https://www.tldp.org/)
   * [Advanced Bash-Scripting Guide](https://www.tldp.org/LDP/abs/html/index.html)
-* [My posts on Linux/Bash](https://azizcodes.github.io/category/linux.html)
+* [Bash reference.](https://tldp.org/LDP/abs/html/refcards.html#AEN22728)
 
 ## Python
 
