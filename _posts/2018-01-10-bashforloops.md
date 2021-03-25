@@ -8,10 +8,9 @@ categories: jekyll update
 (Work in progress)
 
 
-
 ## Bash reference
-[Bash reference.](https://tldp.org/LDP/abs/html/refcards.html#AEN22728)
-
+* [TLDP](https://tldp.org/LDP/abs/html/refcards.html#AEN22728)
+* [Gnu Documentation](https://www.gnu.org/software/bash/manual/bash.html)
 
 ## Summing a list of numbers
 ```
@@ -76,7 +75,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 np.random.rand(5)
+
 ```
+Note: this is easier using Vim's Visual blocks, or even the `s` command.
+
 ## HTML lists from Markdown lists
 Similarly, suppose you are translating a numbered list into html from markdown,
 ``` bash
