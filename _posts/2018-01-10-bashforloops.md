@@ -12,6 +12,13 @@ categories: jekyll update
 * [TLDP](https://tldp.org/LDP/abs/html/refcards.html#AEN22728)
 * [Gnu Documentation](https://www.gnu.org/software/bash/manual/bash.html)
 
+## Getting the week number for a date
+
+```
+date -d "2021-03-25" +%W
+```
+returns weeks passed since the start of the year until this date.
+
 ## Summing a list of numbers
 ```
 seq 10 | awk '{s+=$1} END {print s}'
