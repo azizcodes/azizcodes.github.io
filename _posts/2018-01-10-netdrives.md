@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mapped drives"
-date: 2018-02-03
+date: 2018-07-15
 categories: linux jekyll update 
 ---
 
