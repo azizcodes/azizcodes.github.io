@@ -11,6 +11,8 @@ categories: jekyll update
 ## Bash reference
 * [TLDP](https://tldp.org/LDP/abs/html/refcards.html#AEN22728)
 * [Gnu Documentation](https://www.gnu.org/software/bash/manual/bash.html)
+* [Bash hackers wiki](https://wiki.bash-hackers.org/start)
+* [This brief course](https://fog.ccsf.edu/~gboyd/cs160b/online/index.html) from the City College of SF.
 
 ## Getting the week number for a date
 
