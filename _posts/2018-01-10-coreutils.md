@@ -20,6 +20,9 @@ $ info bash
 
 which is a **highly recommended** read. To open the manpages on emacs, enter `Alt-x man` or `Alt-x woman`.
 
-The `man` command in Linux does something similar, however the navigation is `vi` like, unlike the `info` command which is `emacs` like. For example in the `man` navigation, `j` and `k` to go up and down. `/` to search. In the `info` navigation, `Ctrl-v` goes downward, `Alt-v` upward, and `Ctrl-s` for search. Press `F10` to see more options and in `emacs`.
+The `man` command in Linux does something similar, however the navigation is `vi`-like, unlike the `info` command which is `emacs`-like. For example in the `man` navigation, `j` and `k` to go up and down. `/` to search. In the `info` navigation, `Ctrl-v` goes downward, `Alt-v` upward, and `Ctrl-s` for search. Press `F10` to see more options and in `emacs`.
 
+## Source Code
+
+The source code for [gnu coreutils](http://www.gnu.org/software/coreutils/) is located [here](https://github.com/coreutils/coreutils/tree/master/src). Enjoy!
 
