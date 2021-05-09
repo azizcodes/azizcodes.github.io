@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Arabic in Latex"
+title: "Arabic in LaTeX"
 date: 2018-07-22
 categories: linux jekyll update
 ---
