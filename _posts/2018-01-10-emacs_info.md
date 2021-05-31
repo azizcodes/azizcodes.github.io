@@ -37,7 +37,7 @@ To move through nodes:
 Use this command to `go to node`. Specifiy the manual with parenthesis, then write the name of the node. For example, while in the info buffer, type
 
 ```
-g (calc) Top
+g RET (calc)Top
 ````
 
 would take you to the top level of the calc manual. To copy the name of the current node to the "kill ring", use `c`.
