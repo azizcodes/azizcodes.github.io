@@ -7,16 +7,17 @@ categories: linux jekyll update
 
 # Using Info 
 
-There are tons of manuals on emacs.  While the process of finding information was made really easy, this might be hard for beginners as they may skip over this information initially. *It really saves a lot of time to learn this before learning the details of emacs*.
+There are tons of manuals on emacs.  While the process of finding information was made really easy, this might be hard for beginners as they may skip over this information initially. **It really saves a lot of time to learn this before learning the details of emacs**.
   
 Use `C-h i` to start info. You will get the following message
 
-`
+```
   This (the Directory node) gives a menu of major topics.
   Typing "q" exits, "H" lists all Info commands, "d" returns here,
   "h" gives a primer for first-timers,
   "mEmacs<Return>" visits the Emacs manual, etc.
-`
+```
+
 If the buffer wasn't open already, it will take you to the top directory of `info`. Type:
 
 - `H` to list all info commands
