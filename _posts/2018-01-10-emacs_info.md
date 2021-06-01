@@ -44,4 +44,16 @@ would take you to the top level of the calc manual. To copy the name of the curr
 
 ## info-apropos
 
-To search for something in all manuals, use this command `M-x info-apropos`
+This is very useful, to search for something in all manuals, use this command `M-x info-apropos`
+
+
+## Saving your location
+
+To store your location in the manuals, assuming you are using [Org Mode]({% post_url 2018-01-10-emacs_org %}) to keep track of your notes, you can save the location you are at in your notes as follows:
+
+* `M-x org-store-link` from the info window (uses the [org-store-link](https://orgmode.org/manual/Handling-Links.html) function)
+* `C-c C-l` to insert it in an Org Mode note
+
+The link will look like this [info:org#Timestamps]() and the target will be `[[info:org#Timestamps][info:org#Timestamps]]`. 
+
+A more efficient method uses [org-capture](https://orgmode.org/manual/Using-capture.html#Using-capture). Just type `M-x org-capture` and follow the prompt. The note will be saved in `.notes` folder by default.
