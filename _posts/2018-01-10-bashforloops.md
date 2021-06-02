@@ -2,17 +2,36 @@
 layout: post
 title:  "Bash Reference Sheet"
 date:   2018-03-30
-categories: jekyll update
+categories: jekyll update bash
 ---
 
-(Work in progress)
-
+This file is work in progress. I'll add to it whenever I find a useful function.
 
 ## Bash reference
 * [TLDP](https://tldp.org/LDP/abs/html/refcards.html#AEN22728)
 * [Gnu Documentation](https://www.gnu.org/software/bash/manual/bash.html)
 * [Bash hackers wiki](https://wiki.bash-hackers.org/start)
 * [This brief course](https://fog.ccsf.edu/~gboyd/cs160b/online/index.html) from the City College of SF.
+
+
+## Other posts on Bash
+* [Bash - fun exercises with the date command]({% post_url bashfun1 %})
+* [Bash parameter expansions]({% post_url bashparamssub%})
+
+## Flattening folders
+
+I used this command to flattend the directory: 
+
+``` bash
+find target/ -mindepth 2 -type f -exec mv -i '{}' target/ ';'
+```
+See [flattening](https://nicolasbouliane.com/blog/flatten-directory-linux-macos) for an explanation.
+
+## Merge text files into one big file
+
+``` bash
+for k in $(ls); do cat $k >> notes.md; done
+```
 
 ## Getting the week number for a date
 
@@ -92,7 +111,7 @@ import numpy as np
 np.random.rand(5)
 
 ```
-Note: this is easier using Vim's Visual blocks, or even the `s` command.
+Note: this is easier using Vim's Visual blocks, or even the `s` command in Vim.
 
 ## HTML lists from Markdown lists
 
