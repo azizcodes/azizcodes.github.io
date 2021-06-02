@@ -15,8 +15,8 @@ This file is work in progress. I'll add to it whenever I find a useful function.
 
 
 ## Other posts on Bash
-* [Bash - fun exercises with the date command]({% post_url bashfun1 %})
-* [Bash parameter expansions]({% post_url bashparamssub %})
+* [Bash - fun exercises with the date command]({% post_url 2018-01-10-bashfun1 %})
+* [Bash parameter expansions]({% post_url 2018-01-10-bashparamssub %})
 
 ## Flattening folders
 
