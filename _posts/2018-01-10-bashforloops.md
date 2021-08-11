@@ -18,38 +18,58 @@ This file is work in progress. I'll add to it whenever I find a useful function.
 * [Bash - fun exercises with the date command]({% post_url 2018-01-10-bashfun1 %})
 * [Bash parameter expansions]({% post_url 2018-01-10-bashparamssub %})
 
+## IFS (Internal Field Separator) and Expansions
+
+See the bash man page for info on that. I will illustrate the result of word splitting after _expansion_ for now.
+
+``` bash
+azizcodes$ for k in "hi there"; do echo $k; done
+```
+The result is 
+```
+hi there
+```
+However, 
+``` bash
+azizcodes$ message="hi there";for k in $message; do echo $k; done
+```
+The result is 
+```
+hi
+there
+```
 ## Flattening folders
 
 I used this command to flattend the directory: 
 
 ``` bash
-find target/ -mindepth 2 -type f -exec mv -i '{}' target/ ';'
+azizcodes$ find target/ -mindepth 2 -type f -exec mv -i '{}' target/ ';'
 ```
 See [flattening](https://nicolasbouliane.com/blog/flatten-directory-linux-macos) for an explanation.
 
 ## Merge text files into one big file
 
 ``` bash
-for k in $(ls); do cat $k >> notes.md; done
+azizcodes$ for k in $(ls); do cat $k >> notes.md; done
 ```
 
 ## Getting the week number for a date
 
 ``` bash
-$ date -d "2021-03-25" +%W
+azizcodes$ date -d "2021-03-25" +%W
 ```
 returns the number of mondays that passed since the start of the year until this date.
 
 ## Summing a list of numbers
 
 ``` bash
-$ seq 10 | awk '{s+=$1} END {print s}'
+azizcodes$ seq 10 | awk '{s+=$1} END {print s}'
 ```
 
 ## Reading long files
 
 ``` bash
-$ for k in {1..115}; do echo $k,$(($k+5)); done|column -t -s,|less
+azizcodes$ for k in {1..115}; do echo $k,$(($k+5)); done|column -t -s,|less
 ```
 
 ## For Loops
