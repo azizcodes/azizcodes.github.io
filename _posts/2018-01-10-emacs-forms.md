@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Emacs Text Forms"
+title: "Emacs text forms"
 date: 2018-07-30
 categories: linux jekyll update
 ---
