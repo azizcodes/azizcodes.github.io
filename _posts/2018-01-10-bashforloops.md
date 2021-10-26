@@ -9,7 +9,7 @@ This file is work in progress. I'll add to it whenever I find a useful function.
 
 ## Bash reference
 * [TLDP](https://tldp.org/LDP/abs/html/refcards.html#AEN22728)
-* [Gnu Documentation](https://www.gnu.org/software/bash/manual/bash.html)
+* The [bash man page] from the [Gnu Documentation](https://www.gnu.org/software/bash/manual/bash.html)
 * [Bash hackers wiki](https://wiki.bash-hackers.org/start)
 * [This brief course](https://fog.ccsf.edu/~gboyd/cs160b/online/index.html) from the City College of SF.
 
@@ -17,6 +17,14 @@ This file is work in progress. I'll add to it whenever I find a useful function.
 ## Other posts on Bash
 * [Bash - fun exercises with the date command]({% post_url 2018-01-10-bashfun1 %})
 * [Bash parameter expansions]({% post_url 2018-01-10-bashparamssub %})
+
+
+## Another clever way to sum numbers
+Not a good way to sum a large list of numbers tho
+
+``` bash
+echo $(seq 10 | tr '\n' '+')0 | bc
+```
 
 ## IFS (Internal Field Separator) and Expansions
 
