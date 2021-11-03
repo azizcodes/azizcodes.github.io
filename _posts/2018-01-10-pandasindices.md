@@ -12,10 +12,11 @@ This post aims to clarify pandas indices:
 Let's take an example.
 
 ``` python
-beg='2018-01-01'; end='2018-06-30'
+import pandas as pd
 
-idx=pd.date_range(beg,end); values=[k for k in enumerate(idx)]
-df=pd.DataFrame({'values':values},index=index)
+beg='2018-01-01'; end='2018-06-30'
+idx=pd.date_range(beg,end); values=[k[0] for k in enumerate(idx)]
+df=pd.DataFrame({'values':values},index=idx)
 
 time_shift=5; new_idx=idx+pd.Timedelta(f"{time_shift} days")
 new_df=df.reindex(new_idx)
