@@ -38,11 +38,11 @@ You can run the same command with the keyboard combination `C-c p`.
 
 ## Bonus: A Welcome Page
 
-Here are some other settings I put in `aziz_functions.el`. A welcome page which has some of my settings and the first thing I see when I open emacs.
+Here are some other settings I put in `aziz_functions.el`. A welcome page that contains text in org mode that is the first thing I see when I open emacs, together with ready registers for the current date.
 
 ``` elisp
 (progn
-  (find-file "/ssh:user@phone-ip-relative-to-the-laptop#8022:/data/data/com.termux/files/welcome")
+  (find-file "/ssh:user@phone-ip-relative-to-the-laptop#8022:/data/data/com.termux/files/home/welcome")
   (switch-to-buffer "*scratch*")
   (org-mode)
   (insert (format-time-string "* %y-%m-%d\n"))
