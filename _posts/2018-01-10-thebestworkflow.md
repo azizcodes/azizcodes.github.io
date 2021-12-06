@@ -15,7 +15,7 @@ My solution is the following:
 2. Store emacs functions in a `.el` file remotely on termux that are loaded at startup of emacs on the laptop
 3. Use emacs command or key-binding to run some of these functions
 
-The advantage is thatt doesn't just work for synchronizing scripts, but for synchronizing anything, and away from cloud computing. It's also really easy. I'll illustrate how below.
+The advantage is that doesn't just work for synchronizing scripts, but for synchronizing anything, and away from cloud computing. It's also really easy. I'll illustrate how below.
 
 ## Running Remote Scripts, Locally
 
