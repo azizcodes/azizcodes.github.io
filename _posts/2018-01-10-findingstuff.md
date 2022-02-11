@@ -7,7 +7,7 @@ categories: linux jekyll update
 
 Suppose you are looking for a file in your documents whose name contains the pattern "passport". You don't know if there is something before or after that word, and if the `P` is capitalized or not.
 
-Here is how to search for it
+Here is a way to search for it, from [GNU's find](https://www.gnu.org/software/findutils/manual/html_mono/find.html):
 
 ``` bash
 find ~/ -type f -iname '*passport*'
@@ -29,3 +29,25 @@ find . -type f -name '*passport*' | sed 's/\(.*\)/[[\1]]/' > passport_files.org
 ```
 
 Open `passport_files.org` with the GUI version of emacs. The links are clickable because the file is in org-mode.
+
+## Time filters
+
+[This section](https://www.gnu.org/software/findutils/manual/html_mono/find.html#Time) of the find manual describes filtering search results with time. 
+
+Suppose you want to find files you accessed in the last 24 hours in the current directory
+
+``` bash
+find . -atime 0
+```
+
+or the files created in the 24 hours before yesterday
+
+``` bash
+find . -ctime 1
+```
+
+to list the regular files in your home directory that were modified yesterday, do
+
+``` bash
+find ~/ -daystart -type f -mtime 1
+```
