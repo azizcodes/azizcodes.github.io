@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Find, finding stuff"
+title: "Find, finding files"
 date: 2018-08-07
 categories: linux jekyll update
 ---
@@ -13,7 +13,7 @@ Here is a way to search for it, from [GNU's find](https://www.gnu.org/software/f
 find ~/ -type f -iname '*passport*'
 ```
 
-This will perform a *regex* (regular expression) search probably take a long time going through all subfolders of your home folder. The more specific you are, excluding folders and types of files you don't need, the better. The `-type f` is to tell `find` you are looking for a regular file (not a directory, `d`). 
+This will perform a _case insensitive_ search probably take a long time going through all subfolders of your home folder. The more specific you are, excluding folders and types of files you don't need, the better. The `-type f` is to tell `find` you are looking for a regular file (not a directory, `d`). 
 
 I prefer going to the folder where I am searching first. Say it is in the `~/Documents` folder and we know the word `passport` is for sure it's in lowercase. 
 
