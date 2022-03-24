@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Backgammon"
+title: "Backgammon (Bash Exercise)"
 date: 2018-08-09
 categories: linux jekyll update
 ---
@@ -13,7 +13,7 @@ The following command lists all possibilities as a vertical list of numbers
 echo {1..6}{1..6} | xargs -n 1 | sed 's/\(.\)\(.\)/\1 \2/' | awk -e '$1!=$2{print $1,$2,$1+$2}' -e '$1==$2{print $1,2*$1,3*$1,4*$1}' | xargs -n 1 
 ```
 
-Piping the above to `vd`, and pressing `C-F` gives the following frequency table
+Piping the above to `vd`, and pressing `shift+f` gives the following frequency table
 
 ```
 text	count	percent	histogram
