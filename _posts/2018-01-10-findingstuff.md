@@ -51,3 +51,16 @@ to list the regular files in your home directory that were modified yesterday, d
 ``` bash
 find ~/ -daystart -type f -mtime 1
 ```
+
+
+
+## Null Characters
+
+You can use `-print0` instead of `-print` (the default action) to print the output of the `find` command with *null character* separators instead of whitespace. This helps with filenames that have whitespace in them.
+
+This can be then fed to `-xargs --null` for further processing. 
+
+
+## Using `-ok`
+
+You can use `-ok` instead of `-exec` to it prompts you for confirmation. 

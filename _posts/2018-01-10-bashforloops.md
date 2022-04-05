@@ -17,7 +17,32 @@ This file is work in progress. I'll add to it whenever I find a useful function.
 ## Other posts on Bash
 * [Bash - fun exercises with the date command]({% post_url 2018-01-10-bashfun1 %})
 * [Bash parameter expansions]({% post_url 2018-01-10-bashparamssub %})
+* [Backgammon (Bash Exercise)]({$ post_url 2018-01-10-backgammon })
 
+
+## Printing
+
+``` bash
+man printf   # man page
+man 3 printf # important details about conversion specifiers
+```
+From the manpage:
+
+> Each conversion specification is introduced by the character `%`, and ends with a *conversion specifier*.  In between there may be (in this order) zero or more *flags*, an optional minimum *field width*, an optional *precision* and an optional *length modifier*.
+
+``` bash
+azizcodes$ seq 20 | xargs printf '%6.2f %6.2f\n'
+  1.00   2.00
+  3.00   4.00
+  5.00   6.00
+  7.00   8.00
+  9.00  10.00
+ 11.00  12.00
+ 13.00  14.00
+ 15.00  16.00
+ 17.00  18.00
+ 19.00  20.00
+```
 
 ## Another clever way to sum numbers
 Not a good way to sum a large list of numbers tho
