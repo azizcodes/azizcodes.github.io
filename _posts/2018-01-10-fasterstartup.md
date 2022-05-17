@@ -26,4 +26,10 @@ To see just the calculator buffer and not the others.
 ``` bash
 emacs --help
 ```
-Shows a summary of options when starting emacs.
+
+Shows a summary of options when starting emacs. More examples:
+
+``` bash
+emacs --batch -Q --eval (message (number-to-string (+ 8 9)))
+emacs --batch -Q --eval (message (calc-eval "7+8")) 2>&1 | tail -1
+```
