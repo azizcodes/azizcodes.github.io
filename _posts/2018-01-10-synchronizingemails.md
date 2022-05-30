@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "mbsync, synchronizing emails (3/4)"
-date: 2018-08-16
+date: 2018-08-17
 categories: linux jekyll update
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Emails in emacs [1/4]"
-date: 2018-08-17
+date: 2018-08-15
 categories: linux jekyll update
 ---
 
