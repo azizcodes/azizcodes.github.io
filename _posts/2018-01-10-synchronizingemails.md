@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "mbsync, synchronizing emails"
+title: "mbsync, synchronizing emails (3/4)"
 date: 2018-08-16
 categories: linux jekyll update
 ---
@@ -41,4 +41,4 @@ mbsync -a
 
 # Explanation
 
-The first part defines the _account_ details. The second and third parts define the remote and local _stores_. The fourth part defines a _channel_ and master-slave settings (called far-near in the new version, probably due to bending to woke activists).
+The first part defines the _account_ details. The second and third parts define the remote and local _stores_. The fourth part defines a _channel_ and master-slave settings (called far-near in the new version, lol).
