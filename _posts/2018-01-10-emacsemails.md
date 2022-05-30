@@ -5,6 +5,8 @@ date: 2018-08-15
 categories: linux jekyll update
 ---
 
+e-mails on Emacs: [#1]({% post_url 2018-01-10-emacsemails %}) - [#2]({% post_url 2018-01-10-gnus %}) - [#3]({% post_url 2018-01-10-synchronizingemails %}) -[#4]({% post_url 2018-01-10-mu4e %})
+
 In this series of posts, I write about two emacs email clients, `gnus`[^1][^2] and `mu4e`[^3], using two approaches: 
 
 1. IMAP (in-memory) `gnus` 

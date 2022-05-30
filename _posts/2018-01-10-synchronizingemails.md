@@ -5,6 +5,8 @@ date: 2018-08-17
 categories: linux jekyll update
 ---
 
+e-mails on Emacs: [#1]({% post_url 2018-01-10-emacsemails %}) - [#2]({% post_url 2018-01-10-gnus %}) - [#3]({% post_url 2018-01-10-synchronizingemails %}) -[#4]({% post_url 2018-01-10-mu4e %})
+
 AKA `isync`. Available on Linux with `sudo apt-get install mbsync`.
 
 # Example
