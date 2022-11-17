@@ -2,7 +2,7 @@
 layout: post
 title: "Emacs keyboard macros"
 date: 2018-08-26
-categories: linux jekyll update
+categories: jekyll update
 ---
 
 Consider the problem of converting a `.vtt` file to a printable table that contains the same info.
@@ -22,7 +22,7 @@ ha ha ha
 ```
 `sed` is a good tool for such text substitutions, so is perl. However, this is much easier to do with an emacs keyboard macro. I wrote a sed loop before and felt really proud of myself after that, but I forgot how.
 
-# keyboard macros
+# Keyboard Macros
 
 Refer to the mastering emacs blog for usage [repeating commands in emacs](https://www.masteringemacs.org/article/repeating-commands-emacs) and [here](https://www.masteringemacs.org/article/keyboard-macros-are-misunderstood). 
 
