@@ -5,7 +5,7 @@ date: 2018-08-28
 categories: jekyll update
 ---
 
-An example of data analysis and plotting using Pandas, for your reference. See [this link](assets/MoE_data.ipynb) for the results.
+An example of data analysis and plotting using Pandas, for your reference. See [this link](https://github.com/azizcodes/azizcodes.github.io/blob/master/assets/MoE_data.ipynb) for the results.
 
 ``` python
 import pandas as pd
