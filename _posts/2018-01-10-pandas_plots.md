@@ -1,4 +1,4 @@
---
+---
 layout: post
 title: "Pandas Plots"
 date: 2018-08-28
