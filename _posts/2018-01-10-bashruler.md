@@ -84,8 +84,8 @@ aziz codes is the best blog in the universe
 ```
 
 ---
+[^1]: I previously wrote the `string_ruler2` function as follows, which is equivelant logically to `string_ruler3`, however, it would fail because brace expansions would happen before the command substitution accroding to the rules.
 
-[^1]: I previously wrote the `string_ruler2` function as follows 
 ``` bash																				  
 string_ruler2(){																		  
         num_chars=$(echo $1 | wc -c)													  
@@ -97,6 +97,5 @@ string_ruler2(){
         echo $ruler2																	  
 }																						  
 ```		
-which is equivelant logically to `string_ruler3`, however, it would fail because brace expansions would happen before the command substitution accroding to the rules.
 
 [^2]: This function is trivial to do with a text editor function. e.g., in Emacs you can just just highlight the region and apply `M-=`. The goal of this post is learning how to do this in Bash.
