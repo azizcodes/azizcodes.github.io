@@ -53,16 +53,16 @@ string_ruler3(){
         num_chars=$(echo $1 | wc -c)
         tens=$(echo $num_chars/10 | bc)
 	ruler1=$(
-	for i in $(seq 0 $tens); do
-		for j in $(seq 1 9); do
+	    for i in $(seq 0 $tens); do
+		for j in $(seq 10 | sed 's/.*\(.$\)/\1/g'); do		
 			k=$i$j
 			echo ${k:1:1} 
 		done
 	done | xargs | tr -d ' 'i)
-
+/
 	ruler2=$(
 	for i in $(seq 0 $tens); do
-		for j in $(seq 1 9); do
+		for j in $(seq 10 | sed 's/.*\(.$\)/\1/g'); do
 			k=$i$j
 			echo ${k:0:1} 
 		done
@@ -71,20 +71,21 @@ string_ruler3(){
         echo $ruler1
         echo $ruler2
 }
-
 ```
 
 The result is below[^1][^2]
 
 ``` bash
-$ string_ruler3 'aziz codes is the best blog in the universe'
-aziz codes is the best blog in the universe  
-123456789123456789123456789123456789123456789
-000000000111111111222222222333333333444444444
+aziz codes is the best blog in the universe       
+12345678901234567890123456789012345678901234567890
+00000000001111111111222222222233333333334444444444
 ```
 
 ---
-[^1]: I previously wrote the `string_ruler2` function as follows, which is equivelant logically to `string_ruler3`, however, it would fail because brace expansions would happen before the command substitution accroding to the rules.
+
+[^1]: This function is trivial to do with a text editor function. e.g., in Emacs you can just just highlight the region and apply `M-=`. The goal of this post is learning how to do this in Bash.
+
+[^2]: I previously wrote the `string_ruler2` function as follows, which is equivelant logically to `string_ruler3`, however, it would fail because brace expansions would happen before the command substitution accroding to the rules.
 
 ``` bash																				  
 string_ruler2(){																		  
@@ -98,4 +99,3 @@ string_ruler2(){
 }																						  
 ```		
 
-[^2]: This function is trivial to do with a text editor function. e.g., in Emacs you can just just highlight the region and apply `M-=`. The goal of this post is learning how to do this in Bash.
