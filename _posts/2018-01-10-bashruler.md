@@ -66,7 +66,7 @@ string_ruler4(){
 	num_chars=$(echo -n "$1" | wc -c)
 	
 	# make a sequence of characters equal in length to the input string
-	# pad single digits with zeros -> 01 02 03 etc
+	# pad single digits with zeros -> 01; 02; 03; etc
 	# insert spaces between these 2-digit numbers -> 0 1; 0 2; 0 3 etc
 	# the first field is the tens, the second field is ones (recognizable by awk)
 	
@@ -94,6 +94,8 @@ k n o w   t h y s e l f
 
 These attempts didn't work but they were worth trying.
 
+
+This one doesn't work because brace expansion precedes command substitution.
 ``` bash																				  
 string_ruler2(){																		  
         num_chars=$(echo $1 | wc -c)													  
@@ -106,6 +108,7 @@ string_ruler2(){
 }																						  
 ```		
 
+This one works but its lengthy and doesn't treat spaces correctly.
 ``` bash
 string_ruler3(){
         num_chars=$(echo $1 | wc -c)
