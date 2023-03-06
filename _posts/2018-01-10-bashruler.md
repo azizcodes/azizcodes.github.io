@@ -99,6 +99,48 @@ k n o w   t h y s e l f
 0 0 0 0 0 0 0 0 0 1 1 1
 ```
 
+## More Concise
+
+We can use arrays
+
+
+``` bash
+string_ruler5(){
+
+        # print the input 
+        echo $1
+
+        # make it space separated
+        sep=$(echo $1 | sed 's/./& /g')
+
+        # make an array
+        arr=($sep)
+
+        # make 
+        for k in ${arr[@]}; do 
+                echo $k
+        done | nl | awk '{print int($1/10), int($1%10), $2}'
+}       
+```
+
+The result of the above code is below
+
+``` bash
+$ string_ruler5 knowthyself
+knowthyself
+0 1 k
+0 2 n
+0 3 o
+0 4 w
+0 5 t
+0 6 h
+0 7 y
+0 8 s
+0 9 e
+1 0 l
+1 1 f
+```
+
 ## Bonus: Previous Attempts
 
 These attempts didn't work but they were worth trying.
