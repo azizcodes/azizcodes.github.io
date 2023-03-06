@@ -46,46 +46,53 @@ aziz codes is the best blog in the universe
 
 ```                                  
 
-Nice. But we can improve this further by showing which tens we are at on another ruler?
+Nice. But we can improve this further by showing which tens we are at on another ruler? Also, can we have it identifying the space as a character?
 
 ``` bash
-string_ruler3(){
-        num_chars=$(echo $1 | wc -c)
-        tens=$(echo $num_chars/10 | bc)
-	ruler1=$(
-	    for i in $(seq 0 $tens); do
-		for j in $(seq 10 | sed 's/.*\(.$\)/\1/g'); do		
-			k=$i$j
-			echo ${k:1:1} 
-		done
-	done | xargs | tr -d ' 'i)
-/
-	ruler2=$(
-	for i in $(seq 0 $tens); do
-		for j in $(seq 10 | sed 's/.*\(.$\)/\1/g'); do
-			k=$i$j
-			echo ${k:0:1} 
-		done
-	done | xargs | tr -d ' ')
+string_ruler4(){
+	
+	# print the input
 	echo $1
-        echo $ruler1
-        echo $ruler2
+
+	# insert spaces between characters in the input string
+	# i.e. aziz becomes a z i z
+	old_IFS=$IFS
+	IFS=''
+	data=$(echo -n "$1" | sed 's/\(.\)/\1 /g' )  # or sed 's/\B/ /g' ) 
+	echo $data
+	IFS=$old_IFS
+
+        # calculate number of characters in the input string
+	num_chars=$(echo -n "$1" | wc -c)
+	
+	# make a sequence of characters equal in length to the input string
+	# pad single digits with zeros -> 01 02 03 etc
+	# insert spaces between these 2-digit numbers -> 0 1; 0 2; 0 3 etc
+	# the first field is the tens, the second field is ones (recognizable by awk)
+	
+	ones=$(seq $num_chars | sed 's/^\(.\)$/0\1/' | sed 's/\(.\)\(.\)/\1 \2/' | awk '{print $2}')
+	
+	tens=$(seq $num_chars | sed 's/^\(.\)$/0\1/' | sed 's/\(.\)\(.\)/\1 \2/' | awk '{print $1}')
+
+	echo $ones
+	echo $tens
 }
 ```
 
-The result is below[^1][^2]
+You can see the result of this here.
+
 
 ``` bash
-aziz codes is the best blog in the universe       
-12345678901234567890123456789012345678901234567890
-00000000001111111111222222222233333333334444444444
+$ string_ruler3 'know thyself'
+know thyself
+k n o w   t h y s e l f
+1 2 3 4 5 6 7 8 9 0 1 2
+0 0 0 0 0 0 0 0 0 1 1 1
 ```
 
----
+## Bonus: Previous Attempts
 
-[^1]: This function is trivial to do with a text editor function. e.g., in Emacs you can just just highlight the region and apply `M-=`. The goal of this post is learning how to do this in Bash.
-
-[^2]: I previously wrote the `string_ruler2` function as follows, which is equivelant logically to `string_ruler3`, however, it would fail because brace expansions would happen before the command substitution accroding to the rules.
+These attempts didn't work but they were worth trying.
 
 ``` bash																				  
 string_ruler2(){																		  
@@ -99,3 +106,27 @@ string_ruler2(){
 }																						  
 ```		
 
+``` bash
+string_ruler3(){
+        num_chars=$(echo $1 | wc -c)
+        tens=$(echo $num_chars/10 | bc)
+	ruler1=$(
+	    for i in $(seq 0 $tens); do
+		for j in $(seq 10 | sed 's/.*\(.$\)/\1/g'); do		
+			k=$i$j
+			echo ${k:1:1} 
+		done
+	done | xargs | tr -d ' ')
+
+	ruler2=$(
+	for i in $(seq 0 $tens); do
+		for j in $(seq 10 | sed 's/.*\(.$\)/\1/g'); do
+			k=$i$j
+			echo ${k:0:1} 
+		done
+	done | xargs | tr -d ' ')
+	echo $1
+        echo $ruler1
+        echo $ruler2
+}
+```
