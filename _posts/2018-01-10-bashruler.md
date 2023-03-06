@@ -1,16 +1,27 @@
 ---
 layout: post
-title: "Bash Rulers"
+title: "Bash: String Rulers"
 date: 2018-08-30
 categories: jekyll update
 ---
 
+``` bash
+k n o w   t h y s e l f
+1 2 3 4 5 6 7 8 9 0 1 2
+0 0 0 0 0 0 0 0 0 1 1 1
+```
+
+In this project I try visualize strings as in the above.
+
+## IBAN Numbers
+
 Counting the number of characters in a string is straight forward with `wc`
 
 ``` bash
-echo string | wc -c
+echo $iban_number | wc -c
 ```
-Suppose we want to visualize the length of a 24-character strings, e.g. in an IBAN number. We could do
+
+Suppose we want to visualize the 24-character strings. We could define a bash function as follows 
 
 ``` bash
 iban_ruler(){
@@ -43,10 +54,9 @@ string_ruler(){
 $ string_ruler 'aziz codes is the best blog in the universe'
 aziz codes is the best blog in the universe 
 12345678901234567890123456789012345678901234
-
 ```                                  
 
-Nice. But we can improve this further by showing which tens we are at on another ruler? Also, can we have it identifying the space as a character?
+This is nice but it's not treating spaces correctly. Also, I want to show the another ruler that has the tens. 
 
 ``` bash
 string_ruler4(){
@@ -79,11 +89,10 @@ string_ruler4(){
 }
 ```
 
-You can see the result of this here.
-
+You can see the result of this below.
 
 ``` bash
-$ string_ruler3 'know thyself'
+$ string_ruler4 'know thyself'
 know thyself
 k n o w   t h y s e l f
 1 2 3 4 5 6 7 8 9 0 1 2
