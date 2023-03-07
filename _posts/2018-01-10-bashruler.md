@@ -121,6 +121,7 @@ string_ruler5(){
                 echo $k
         done | nl | awk '{print int($1/10), int($1%10), $2}'
 }       
+
 ```
 
 The result of the above code is below
@@ -139,6 +140,32 @@ knowthyself
 0 9 e
 1 0 l
 1 1 f
+```
+improved to handles spaces below
+
+``` bash
+string_ruler6(){
+        input=$1
+	letters=$(echo $input | sed 's/ /_/g' | sed 's/./& /g')
+	arr=($letters)
+	
+	for a in "${arr[@]}"; do echo $a; done | xargs | sed 's/_/ /g'
+	
+	i=0
+	for a in "${arr[@]}"; do
+	    i=$(($i+1))
+	    k=$(($i%10))
+	    echo $k
+	done | xargs
+
+	i=0
+	for a in "${arr[@]}"; do
+	    i=$(($i+1))
+	    j=$(($i/10))
+	    echo $j
+	done | xargs
+}
+
 ```
 
 ## Bonus: Previous Attempts
