@@ -99,7 +99,7 @@ k n o w   t h y s e l f
 0 0 0 0 0 0 0 0 0 1 1 1
 ```
 
-## More Concise
+## With Bash Arrays
 
 We can use arrays
 
@@ -167,8 +167,39 @@ string_ruler6(){
 }
 
 ```
+## Bonus: Other Attempts
 
-## Bonus: Previous Attempts
+Python is excellent at looping. A solution is below
+
+``` python
+import sys
+
+arg=sys.argv[1]
+print(arg)
+
+numbered=[k for k in enumerate(arg)]
+
+for n,a in numbered:
+    print(a,end=' ')
+print('')
+
+for n,a in numbered:
+    print(n%10,end=' ')
+print('')
+
+for n,a in numbered:
+    print(n//10,end=' ')
+print('')
+```
+Saved into `numbered.py`, then 
+
+```
+$ python numbered.py 'know thyself'
+know thyself
+k n o w   t h y s e l f 
+0 1 2 3 4 5 6 7 8 9 0 1 
+0 0 0 0 0 0 0 0 0 0 1 1 
+```
 
 These attempts didn't work but they were worth trying.
 
@@ -183,8 +214,8 @@ string_ruler2(){
         echo $1																			  
         echo $ruler1																	  
         echo $ruler2																	  
-}																						  
-```		
+} 
+```
 
 This one works but its lengthy and doesn't treat spaces correctly.
 ``` bash
