@@ -5,7 +5,9 @@ date: 2018-08-31
 categories: jekyll update
 ---
 
-Warning: this part is confusing. Let's try to do the previous exercise again. Which writing a `word` as `w o r d`, using Bash arrays.
+Warning: this part is confusing. 
+
+Let's try to do the previous exercise again. Which was writing a `word` as `w o r d`, using Bash arrays.
 
 ``` bash
 #!/bin/bash
@@ -16,7 +18,7 @@ read_as_array(){
 		for k in "${arr[@]}"; do
 			echo $k
 		done
-	done <<< $(echo $1 | sed -e 's/./& /g' )
+	done <<< $(echo $1 | sed 's/./& /g' )
 }
 
 input0="abdulaziz"
@@ -37,7 +39,7 @@ i
 z
 ```
 If we try this approach with a sentence, we will not get the desired result
-```
+``` bash
 input="know thyself" 
 echo "The input is '$input'"
 read_as_array "$input"
