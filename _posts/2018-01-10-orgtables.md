@@ -13,26 +13,62 @@ To sum elements in a column (from the 2nd row in the 3rd column in the example b
 @>$3=vsum(@2..@-1)
 ```
 
-To insert a date into a field, you can use this formula
+
+
+# Time stamp
+To insert a today's date into a field, you can use this formula
 
 ```
 '(org-insert-time-stamp (current-time))
 ```
 
+Of course you need to remember to re-evaluate the table.
 
 Here are some example that use both calc and elisp to make some date calculations.
 
 ```
-| today            | start            | finish           | total days | remaining |     % |
+| today*           | start            | finish           | total days | remaining |     % |
 |------------------+------------------+------------------+------------+-----------+-------|
-| [2023-07-12 Wed] | [2021-01-17 Sun] | [2024-01-17 Wed] |       1095 |       189 | 82.74 |
+| [2023-07-14 Fri] | [2021-01-17 Sun] | [2024-01-17 Wed] |       1095 |       187 | 82.92 |
 #+TBLFM: $1='(org-insert-time-stamp (current-time))'::$4=$3-$2::$5=$3-$1::$6=100*($4-$5)/$4;f2
+```
 
+# Parsing Dates
+
+Using the `pack` function from the calculator. Notice that the range is sent to the calculator as a vector. i.e. `$1..$3` is read as `[2023,12,31]` which is the input that `pack` accepts.
+
+```
 |   yr | mo | da | date             |
 |------+----+----+------------------|
-| 2023 | 12 | 31 | [2014-12-31 Wed] |
-#+TBLFM: $4=pack(-14,[2014,$2,$3])
+| 2023 | 12 | 31 | [2023-12-31 Sun] |
+#+TBLFM: $4=pack(-14,$1..$3)
 ```
+
+# cumsum
+
+This is one is a bit tricky. Example from [[https://emacs.stackexchange.com/questions/56316/cumulative-column-in-org-table][stackoverflow]]: 
+
+| Date | Cases | Cumulative |
+|------+-------+------------|
+|      |     0 |          0 |
+|      |     1 |          1 |
+|      |     0 |          1 |
+|      |     0 |          1 |
+|      |     0 |          1 |
+|      |     0 |          1 |
+|      |     1 |          2 |
+|      |     1 |          3 |
+|      |     2 |          5 |
+|      |     2 |          7 |
+|      |     1 |          8 |
+|      |     0 |          8 |
+#+TBLFM: $3=vsum(@I$2..@+0$2)
+
+Tables can improve `calc`'s functionality. Surprisingly, there's no `cumsum` function in calc.
+
+
+# elisp functionss
+
 In the following some useful elisp functions
 
 ```elisp
@@ -40,11 +76,6 @@ In the following some useful elisp functions
 (org-insert-time-stamp (current-time)) ;; insert date only
 
 ;; truncate a string? string operations in general
-```
-
-In the following some useful calc functions
-```
-pack(-14,[2021,1,17]) 
 ```
 
 You can use the [following commands](https://www.gnu.org/software/emacs/manual/html_node/org/Editing-and-debugging-formulas.html) to edit the fields
