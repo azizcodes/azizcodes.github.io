@@ -1,21 +1,32 @@
 ---
 layout: post
-title: "Advanced functions in Org Tables"
-date: 2018-08-12
+title: "Org Tables"
+date: 2018-09-07
 categories: linux jekyll update
 ---
 
-The basics of Org Tables are documented in Emacs. However, more sophisticated formulas requires experience with Calc and possibly Elisp. You can see some examples of this below.
+The basics of Org Tables are documented in Emacs. However, more sophisticated formulas requires experience with Calc and possibly Elisp. I'll document some of them below.
 
-To sum elements in a column (from the 2nd row in the 3rd column in the example below) and put the result in the last row
+# Basics
 
-# Special References
+You can use the [following commands](https://www.gnu.org/software/emacs/manual/html_node/org/Editing-and-debugging-formulas.html) to edit the fields
 
-Last row `@>` last column `$>`. Before last is `@>>`etc
+* `C-c SPC` blanks a field
+* `C-c `\` edit a field
+* `C-c =` install a new formula for the currnet column
+* `C-c ?` field info
+* `C-c '` edit formulas
+* `C-u C-c C-c` re-evaluate all formulas 
+
+# References
+
+There is a lot of information in the details of [this page](https://orgmode.org/org.html#The-Spreadsheet). Por ejemplo:
+
+Last row `@>` last column `$>`. Before last is `@>>`etc. e.g.
 ```
 @>$3=vsum(@2..@-1)
 ```
-First row `@<` first column `$<`
+First row `@<` first column `$<`. This isn't so useful because you always from `@1` and `$1` anyway.
 
 First hline is `@I` second is `@II`etc.
 
@@ -38,7 +49,7 @@ Here are some example that use both calc and elisp to make some date calculation
 
 # Parsing Dates
 
-Using the `pack` function from the calculator. Notice that the range is sent to the calculator as a vector. i.e. `$1..$3` is read as `[2023,12,31]` which is the input that `pack` accepts.
+Using the `pack` function from the calculator. Notice that the range is sent to the calculator as a vector. i.e. $1..$3` is read as `[2023,12,31]` which is the input that `pack` accepts.
 ```
 |   yr | mo | da | date             |
 |------+----+----+------------------|
@@ -68,7 +79,6 @@ This is one is a bit tricky. Example from [stackoverflow](https://emacs.stackexc
 ````
 Tables can improve `calc`'s functionality. Surprisingly, there's no `cumsum` function in calc.
 
-
 # elisp functions
 
 In the following some useful elisp functions
@@ -79,17 +89,6 @@ In the following some useful elisp functions
 
 ;; truncate a string? string operations in general
 ```
-You can use the [following commands](https://www.gnu.org/software/emacs/manual/html_node/org/Editing-and-debugging-formulas.html) to edit the fields
-
-* `C-c SPC` blanks a field
-* `C-c `\` edit a field
-* `C-c =` install a new formula for the currnet column
-* `C-c ?` field info
-* `C-c '` edit formulas
-* `C-u C-c C-c` re-evaluate all formulas 
-
 # Org Plot
 
 This requires gnuplot. Below are some examples.
-
-
