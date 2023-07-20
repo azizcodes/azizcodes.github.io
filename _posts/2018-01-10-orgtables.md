@@ -49,12 +49,15 @@ Here are some example that use both calc and elisp to make some date calculation
 
 # Parsing Dates
 
-Using the `pack` function from the calculator. Notice that the range is sent to the calculator as a vector. i.e. $1..$3` is read as `[2023,12,31]` which is the input that `pack` accepts.
+Using the `pack` function from the calculator. Notice that the range is sent to the calculator as a vector. i.e. `$1..$3` is read as `[2023,12,31]` which is the input that `pack` accepts.
 ```
 |   yr | mo | da | date             |
 |------+----+----+------------------|
 | 2023 | 12 | 31 | [2023-12-31 Sun] |
 #+TBLFM: $4=pack(-14,$1..$3)
+
+For more details on parsing date strings, you can the section "elisp functions" below.
+
 ```
 # cumsum
 
@@ -87,7 +90,7 @@ In the following some useful elisp functions
 (org-time-stamp '(16) 1)               ;; insert date & time
 (org-insert-time-stamp (current-time)) ;; insert date only
 ```
-See the next post. You can make complex functions with lisp expressions, as follows
+See the next post for many more examples. You can make functions that do whatever you want with lisp expressions, as follows
 
 ```elisp
 (defun getmonth(x)
@@ -97,13 +100,15 @@ See the next post. You can make complex functions with lisp expressions, as foll
   )
 
 (getmonth "2022-10-15") 
-  
+```
+Remember to evaluate the function(s) before evaluating the table with `C-x C-e`. Now you can use this function in a table:
+
+```  
 | 1 | 2022-10-15 | 10 | 1 |
 | 2 | 2022-11-15 | 11 | 1 |
 | 3 | 2022-01-12 |  1 | 0 |
 #+TBLFM: $1=@#::$3='(getmonth $2)::$4=if($3>=10,1,0)
 ```
-Remember to evaluate the function(s) before evaluating the table.
 
 # Org Plot
 
