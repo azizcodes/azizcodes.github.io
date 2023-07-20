@@ -76,7 +76,6 @@ a
 
 ;; access month
 (decoded-time-month a)
-
 =>12
 
 ```

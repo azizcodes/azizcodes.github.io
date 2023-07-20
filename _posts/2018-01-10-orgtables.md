@@ -86,9 +86,26 @@ In the following some useful elisp functions
 ```elisp
 (org-time-stamp '(16) 1)               ;; insert date & time
 (org-insert-time-stamp (current-time)) ;; insert date only
-
-;; truncate a string? string operations in general
 ```
+See the next post. You can make complex functions with lisp expressions, as follows
+
+```elisp
+(defun getmonth(x)
+  ;; takes date string and converts it to month
+  (setq a (org-parse-time-string x))
+  (decoded-time-month a)
+  )
+
+(getmonth "2022-10-15") 
+  
+| 1 | 2022-10-15 | 10 | 1 |
+| 2 | 2022-11-15 | 11 | 1 |
+| 3 | 2022-01-12 |  1 | 0 |
+#+TBLFM: $1=@#::$3='(getmonth $2)::$4=if($3>=10,1,0)
+```
+Remember to evaluate the function(s) before evaluating the table.
+
 # Org Plot
 
 This requires gnuplot. Below are some examples.
+
