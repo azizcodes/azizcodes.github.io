@@ -110,7 +110,31 @@ Remember to evaluate the function(s) before evaluating the table with `C-x C-e`.
 #+TBLFM: $1=@#::$3='(getmonth $2)::$4=if($3>=10,1,0)
 ```
 
+# Time
+
+*Remote tables* and time display
+
+```
+Summing late hours for each day in the month
+
+#+NAME: latehours
+| late hours |
+|------------|
+|   00:23:02 |
+|   00:28:30 |
+|   00:07:21 |
+|   01:17:48 |
+|       2.28 |
+#+TBLFM: @>=vsum(@I..@-1);t
+
+Finding the remaining time in hours
+
+| total allowed | total late hours | remaining allowed | formatted |
+|---------------+------------------+-------------------+-----------|
+|             4 |             2.28 |              1.72 |  01:43:12 |
+#+TBLFM: $2='(identity remote(latehours,@>$1))::$3=$1-$2::=3600*$3;T
+```
+
 # Org Plot
 
 This requires gnuplot. Below are some examples.
-
