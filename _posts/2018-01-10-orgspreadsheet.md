@@ -11,36 +11,37 @@ categories: linux jekyll update
 
 They can be useful to use with org tables if you're writing long expressions, logical operations, string manipulation, etc.
 
-```
-# define a calc function and evaluate it with `C-x C-e`
+```elisp
+;; define a calc function and evaluate it with `C-x C-e`
 (defun firstletter(n)
     (identity (substring n 0 1))
     )
-
-# use it in a table    
+```
+You can now use it in a table
+```
 | abdulaziz | a |
 | khalid    | k |
 #+TBLFM: $2='(firstletter $1)
 
 ```
+`defmath` on the other hand, is designed to work with the calculator. The good thing about them is that you can use the calculator's functions within the function definition. There are other uses for it like the ability to use the stack as arguments to functions, but here we are interested in their use in org tables:
 
-`defmath` on the other hand, is designed to work with the calculator. The good thing about them is that you can use the calculator's functions within the function definition.  There are other uses for it like the ability to use the stack as arguments to functions.
-
-```
-# define a calc function
+```elisp
+;; define a calc function
 (defmath myfact (n)
   (if (> n 0)
       (* n (myfact (1- n)))
     1))
-
-# now you can write
-
+```
+now you can write an algebraic expression
+```
 myfact(5) => 
 
-# and press `C-x * e` on the previous line
+# and press `C-x * e` on the previous line to get
 myfact(5) => 120
-
-# use it in a table
+```
+or you can use it in a table
+```
 | 4 |  24 |
 | 2 |   2 |
 | 3 |   6 |
