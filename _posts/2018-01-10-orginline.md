@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "inline programming in org"
+title: "Literate Programming in org"
 date: 2018-09-10
 categories: linux jekyll update
 ---
 
 You can include python in your org documents:
 
-``` elisp
+``` 
 #+begin_src python :results value
   x=[k for k in range(10)]
   return x
@@ -17,9 +17,11 @@ You can include python in your org documents:
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 ```
 
-if you are evaluating a number of variables and you want to see what python prints to stdout, use the following for `:results`
+The above syntax is when you are evaluating a single value. Notice that the output is an org table and easily exportable to html.
 
-``` elisp
+if you are evaluating a number of variables and you want to see whatever python prints to stdout, use the following for `:results`
+
+``` 
 #+begin_src python :results output
 
   import numpy as np
@@ -81,8 +83,9 @@ This example uses numpy and matplotlib.
 #+RESULTS:
 [[file:pie.png]]
 ```
+The `#+RESULTS` get updated when you  (re)evaluate the block and it's exportable to html.
 
 # Further Reading
-
-* https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html
-* https://orgmode.org/manual/Results-of-Evaluation.html#Results-of-Evaluation
+" [literate programming](https://en.m.wikipedia.org/wiki/Literate_programming)
+* [overview on this topic](https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html)
+* [details in the manual](https://orgmode.org/manual/Results-of-Evaluation.html#Results-of-Evaluation)
