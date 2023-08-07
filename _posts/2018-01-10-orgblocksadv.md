@@ -1,11 +1,15 @@
 ---
 layout: post
-title: "Literate Programming in org"
-date: 2018-09-10
+title: "Literate Programming in org (2/2)"
+date: 2018-09-11
 categories: linux jekyll update
 ---
 
-Still diving into org babel. *Warning: this is pretty deep..*
+Still diving into org babel.. 
+
+*Warning: this is a pretty deep dive.*
+
+*Note: I could've used Python for the below, but as of now I don't have all necessary packages on all my platforms and elisp is the most portable solution.*
 
 Very instructive example from [stackoverflow](https://emacs.stackexchange.com/questions/42208/how-to-add-hline-and-column-sum-to-bottom-of-table-using-a-src-block):
 
@@ -33,20 +37,7 @@ Very instructive example from [stackoverflow](https://emacs.stackexchange.com/qu
 |   | 10 |
 ```
 
-Ok, so for the simple case, this how to calculate the sum and mean by calling calc from lisp:
-
-```elisp
-;; sum
-(setq v1 '(vec 10 20 30 40))
-(calc-eval (calcFunc-vmean v1))
-
-;; mean
-(setq d '(10 20 30 40))
-(setq v2 (cons 'vec d))
-(calc-eval (calcFunc-vmean v2))
-```
-
-So, now let's build a table:
+So from analyzing the above, we can see the syntax that org babel interprets as a table. So, we can build one with elisp as follows:
 
 ```
 #+name: mytab
@@ -62,7 +53,30 @@ So, now let's build a table:
 |  6 |
 ```
 
-then call its values from other code blocks and calculate the sum and the mean:
+now we need to operate on these lists and find the sum and mean. These are vector operations and I will use calc.
+
+
+Calc has a special syntax for vectors that was barely mentioned once in the whole documentation. [This stackoverflow post](https://emacs.stackexchange.com/questions/18704/how-to-use-calc-vector-functions) mentioned that it uses a special "internal" syntax for vectors:
+
+```
+(vec 1 2 3)
+```
+
+Ok, so for the simple case, this how to calculate the sum and mean by calling calc from lisp:
+
+```elisp
+;; finding the mean using calc
+(setq v1 '(vec 10 20 30 40))
+(calc-eval (calcFunc-vmean v1))
+
+;; converting from a list 
+(setq d '(10 20 30 40))
+;; to a vector
+(setq v2 (cons 'vec d))
+(calc-eval (calcFunc-vmean v2))
+```
+
+Now we can form code blocks and calculate the sum and the mean using elisp.
 
 ```
 #+name:mysum
@@ -81,5 +95,3 @@ then call its values from other code blocks and calculate the sum and the mean:
 #+RESULTS: mymean
 : 5.4
 ```
-
-Many thanks to [this stackoverflow post](https://emacs.stackexchange.com/questions/18704/how-to-use-calc-vector-functions), too.
