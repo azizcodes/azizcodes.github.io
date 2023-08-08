@@ -95,3 +95,44 @@ Now we can form code blocks and calculate the sum and the mean using elisp.
 #+RESULTS: mymean
 : 5.4
 ```
+
+# Producing a table
+
+Let's calculate the sum and the mean for this data and put them in a table
+
+```
+#+name: newdata
+| v  |
+|----|
+| 45 |
+| 45 |
+| 52 |
+| 57 |
+| 43 |
+| 65 |
+| 25 |
+```
+code block
+
+```elisp
+#+name: stats
+#+begin_src emacs-lisp :var v=newdata :exports results :noweb yes 
+  (setq u (mapcar 'car v))
+
+  (setq sum (apply '+ u))
+  (setq sumt (number-to-string sum))
+
+  (setq meant (calc-eval (calcFunc-vmean (cons 'vec u))))
+  (setq mean (format "%6.2f" (string-to-number meant)))
+
+  (append '((Sum Mean)) `(hline (,sum ,mean)))
+#+end_src
+```
+result
+
+```
+#+RESULTS: stats
+| Sum |  Mean |
+|-----+-------|
+| 332 | 47.43 |
+```
