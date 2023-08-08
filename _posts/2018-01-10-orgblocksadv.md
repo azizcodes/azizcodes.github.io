@@ -7,9 +7,10 @@ categories: linux jekyll update
 
 Still diving into org babel.. 
 
-*Warning: this is a pretty deep dive.*
-
-*Note: I could've used Python for the below, but as of now I don't have all necessary packages on all my platforms and elisp is the most portable solution.*
+Notes: 
+1. This is a pretty deep dive into elisp. I could've used Python for the below, but as of now I don't have all necessary packages on all my platforms and elisp is the most portable solution
+3. In order to facilitate evaluation, modify the variable `org-confirm-babel-evaluate` with `C-h v` to `nil` 
+4. Code blocks are an excellent way to learn programming
 
 Very instructive example from [stackoverflow](https://emacs.stackexchange.com/questions/42208/how-to-add-hline-and-column-sum-to-bottom-of-table-using-a-src-block):
 
