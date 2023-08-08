@@ -86,6 +86,6 @@ This example uses numpy and matplotlib.
 The `#+RESULTS` get updated when you  (re)evaluate the block and it's exportable to html.
 
 # Further Reading
-" [literate programming](https://en.m.wikipedia.org/wiki/Literate_programming)
+* [literate programming](https://en.m.wikipedia.org/wiki/Literate_programming)
 * [overview on this topic](https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html)
 * [details in the manual](https://orgmode.org/manual/Results-of-Evaluation.html#Results-of-Evaluation)

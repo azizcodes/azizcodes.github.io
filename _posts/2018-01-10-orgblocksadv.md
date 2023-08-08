@@ -140,7 +140,7 @@ result
 
 # Mappig values
 
-```
+```elisp
 #+name: mapping
 #+begin_src emacs-lisp :var v=newdata :exports results :noweb yes 
  (setq u (mapcar 'car v))
