@@ -136,3 +136,30 @@ result
 |-----+-------|
 | 332 | 47.43 |
 ```
+
+# Mappig values
+
+```
+#+name: mapping
+#+begin_src emacs-lisp :var v=newdata :exports results :noweb yes 
+ (setq u (mapcar 'car v))
+ (setq doubled (mapcar '(lambda (d) (* d 2))  u))
+ (setq doubledl (mapcar 'list doubled))
+ (setq med (append '((v*2)) '(hline)))
+ (append med doubledl)
+#+end_src
+```
+And the result
+
+```
+#+RESULTS: mapping
+|  v*2 |
+|------|
+|   90 |
+|   90 |
+| 1050 |
+|  114 |
+|   86 |
+|  130 |
+|   50 |
+```
