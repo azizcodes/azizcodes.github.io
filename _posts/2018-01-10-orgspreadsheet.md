@@ -14,7 +14,7 @@ They can be useful to use with org tables if you're writing long expressions, lo
 ```elisp
 ;; define a calc function and evaluate it with `C-x C-e`
 (defun firstletter(n)
-    (identity (substring n 0 1))
+    (substring n 0 1)
     )
 ```
 You can now use it in a table
