@@ -1,4 +1,9 @@
-
+---
+layout: post
+title: "Gantt Chart by Hand"
+date: 2018-09-10
+categories: linux jekyll update
+---
 
 I am constructing Gantt chart by hand. Using a monospaced font I can write
 
@@ -34,27 +39,9 @@ So, write a function that outputs a string
 
 (repeat "x" 4) ;; C-x C-e gives "xxxx"
 ```
-
 Now you can use it in an org table
-
 
 ```
 | 24 | x | xxxxxxxxxxxxxxxxxxxxxxxx |
 #+TBLFM: $2=x::$3='(repeat $2 (string-to-number $1))
 ```
-
-(concat "a" "a")
-
-
-(defun firstletter(n)
-(setq a (substring n 0 1))
-(dotimes (i 10) (insert a)
-    )
-    )
-
-(firstletter "abdulaziz")
-aaaaaaaaaa
-    
-| abdulaziz | aa |
-#+TBLFM: $2='(firstletter $1)
-
