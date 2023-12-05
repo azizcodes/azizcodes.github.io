@@ -43,3 +43,53 @@ Now you can use it in an org table
 | 24 | x | xxxxxxxxxxxxxxxxxxxxxxxx |
 #+TBLFM: $3='(repeat $2 (string-to-number $1))
 ```
+
+# Extra
+
+Understanding function scopes is important to avoid errors.
+
+``` elisp
+(defmath aziz1(x y)
+   (math-floor (* 100 (/ x y)))
+)
+
+(calcFunc-aziz1 5 8) ;; => 62
+
+(defun aziz2(x y)
+  (math-floor (* 100 (/ x y)))
+)
+
+(aziz2 5 8) ;; => 0 ;; math-floor not callable from within defun
+
+(defun aziz3(x y) 
+  (calcFunc-aziz1 x y) ;; calcFunc-aziz1 not callable from withint defun
+)
+(aziz3 5 8) => 62 
+```
+
+Let's modify the `repeat` function above to accept two inputs (nominator, denominator) based on the above.
+
+``` elisp
+(defun repeat(x n1 n2)
+  ;; initialize the while loop
+  (setq num 0) (setq b "")
+
+  (setq n (calcFunc-aziz1 n1 n2))
+
+  ;; concatenate to the empty string with each increment
+  (while (< num n) ;; (calcFunc-aziz1 n1 n2) doesn' work inside the table! Probably due to the scope
+    (setq b (concat b x))
+    (setq num (1+ num))
+    )
+
+  ;; output to be displayed
+  (message b)
+)
+
+(repeat "x" 1 30) ;; => xxx
+
+| 1 | 30 | xxx    |
+| 2 | 30 | xxxxxx |
+#+TBLFM: ='(repeat "x" $1 $2);N  
+```
+For more information on the `;N` flag, see [this](https://orgmode.org/worg/org-tutorials/org-spreadsheet-lisp-formulas.html).
