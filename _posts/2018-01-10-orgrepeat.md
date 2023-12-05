@@ -5,6 +5,7 @@ date: 2018-09-10
 categories: linux jekyll update
 ---
 
+
 I am constructing Gantt chart by hand. Using a monospaced font I can write
 
 ```
@@ -46,7 +47,7 @@ Now you can use it in an org table
 
 # Extra
 
-Understanding function scopes is important to avoid errors.
+Understanding function scopes is important to avoid errors. 
 
 ``` elisp
 (defmath aziz1(x y)
@@ -56,10 +57,10 @@ Understanding function scopes is important to avoid errors.
 (calcFunc-aziz1 5 8) ;; => 62
 
 (defun aziz2(x y)
-  (math-floor (* 100 (/ x y)))
+  (math-floor (* 100 (/ x y))) ;; syntax not allowed inside defun
 )
 
-(aziz2 5 8) ;; => 0 (math-floor not callable from within defun?)
+(aziz2 5 8) ;; => 0 
 
 (defun aziz3(x y) 
   (calcFunc-aziz1 x y) 
@@ -70,7 +71,11 @@ Understanding function scopes is important to avoid errors.
 Let's modify the `repeat` function above to accept two inputs (nominator, denominator) based on the above.
 
 ``` elisp
-(defun repeat(x n1 n2)
+(defun repeat2(x n1 n2)
+  (defmath aziz1(x y)
+    (math-floor (* 100 (/ x y)))
+    )
+
   ;; initialize the while loop
   (setq num 0) (setq b "")
 
@@ -93,6 +98,7 @@ We can then write the following table
 ```
 | 1 | 30 | xxx    |
 | 2 | 30 | xxxxxx |
-#+TBLFM: $3='(repeat "x" $1 $2);N  
+#+TBLFM: $3='(repeat2 "x" $1 $2);N  
 ```
 For more information on the `;N` flag, see [this](https://orgmode.org/worg/org-tutorials/org-spreadsheet-lisp-formulas.html).
+
