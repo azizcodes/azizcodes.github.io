@@ -59,12 +59,12 @@ Understanding function scopes is important to avoid errors.
   (math-floor (* 100 (/ x y)))
 )
 
-(aziz2 5 8) ;; => 0 ;; math-floor not callable from within defun
+(aziz2 5 8) ;; => 0 (math-floor not callable from within defun?)
 
 (defun aziz3(x y) 
-  (calcFunc-aziz1 x y) ;; calcFunc-aziz1 not callable from withint defun
+  (calcFunc-aziz1 x y) 
 )
-(aziz3 5 8) => 62 
+(aziz3 5 8) ;; => 62 (calcFunc-aziz1 is callable)
 ```
 
 Let's modify the `repeat` function above to accept two inputs (nominator, denominator) based on the above.
@@ -77,7 +77,7 @@ Let's modify the `repeat` function above to accept two inputs (nominator, denomi
   (setq n (calcFunc-aziz1 n1 n2))
 
   ;; concatenate to the empty string with each increment
-  (while (< num n) ;; (calcFunc-aziz1 n1 n2) doesn' work inside the table! Probably due to the scope
+  (while (< num n)
     (setq b (concat b x))
     (setq num (1+ num))
     )
@@ -87,9 +87,12 @@ Let's modify the `repeat` function above to accept two inputs (nominator, denomi
 )
 
 (repeat "x" 1 30) ;; => xxx
+```
+We can then write the following table
 
+```
 | 1 | 30 | xxx    |
 | 2 | 30 | xxxxxx |
-#+TBLFM: ='(repeat "x" $1 $2);N  
+#+TBLFM: $3='(repeat "x" $1 $2);N  
 ```
 For more information on the `;N` flag, see [this](https://orgmode.org/worg/org-tutorials/org-spreadsheet-lisp-formulas.html).
