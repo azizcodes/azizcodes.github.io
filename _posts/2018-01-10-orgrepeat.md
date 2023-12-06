@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gantt Chart by Hand"
-date: 2018-09-10
+date: 2018-09-13
 categories: linux jekyll update
 ---
 
