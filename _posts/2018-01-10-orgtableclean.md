@@ -13,7 +13,6 @@ Sometimes you want to keep your org tables clean or add text to the result of a 
  (round (/ (* x 100) (+ x y)) 2)
 )
 
-
 (defun addpersign(x y)
 (setq num (calc-eval (calcFunc-mypercent x y)))
 (concat num "%")
@@ -27,4 +26,14 @@ The org table can be written as
 |---+---+-------+-------+--------|
 | 4 | 3 | 57.14 | 42.86 | 57.14% |
 #+TBLFM: $3=mypercent($1,$2)::$4=mypercent($2,$1)::$5='(addpersign $1 $2);N
+```
+
+formatting Riyal amounts
+
+```
+| a |     12 | SAR  12.00 |
+| b |     34 | SAR  34.00 |
+| c | 260.87 | SAR 260.87 |
+| d |  739.1 | SAR 739.10 |
+#+TBLFM: ='(concat "SAR " (format "%6.2f" ));L
 ```
