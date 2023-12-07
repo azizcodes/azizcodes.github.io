@@ -37,10 +37,12 @@ formatting Riyal amounts
 | d |  739.1 | SAR 739.10 |
 #+TBLFM: ='(concat "SAR " (format "%6.2f" ));L
 ```
+
+# Separating 1000s with Commas 
+
 Thousands separator function from emacswiki:
 
 ``` elisp
-```
 (defun group-number (num &optional size char)
   "Format NUM as string grouped to SIZE with CHAR."
   ;; Based on code for `math-group-float' in calc-ext.el
@@ -59,29 +61,24 @@ Thousands separator function from emacswiki:
             pt (- pt size)))
     str))
 ```
-
-
-applying it 
+Applying it 
 
 ```
 |    56.1 |    890 | SAR  946.10 |
 | 100.545 | 974.25 | SAR 1074.80 |
 #+TBLFM: $3='(concat "SAR"  (group-number (format "%8.2f" (+ $1 $2))));L
 ```
-
-
-cleanning up
+The above can be written more compactly as
 
 ``` elisp
-(defun azf(x y)
+(defun addandformat(x y)
 (concat "SAR"  (group-number (format "%8.2f" (+ x y))))
 )
 ```
-
+And
 
 ```
-|    56.1 |    890 | SAR  946.10 |
-| 100.545 | 974.25 | SAR 1074.80 |
-#+TBLFM: $3='(azf $1 $2);L 
-```
+|    56.1 |    890 | SAR   946.10 |
+| 100.545 | 974.25 | SAR 1,074.80 |
+#+TBLFM: $3='(addndformat $1 $2);L 
 ```
