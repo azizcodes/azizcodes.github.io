@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Cleaner org tables"
+title: "Cleaner org tables (2/2)"
 date: 2018-09-14
 categories: linux jekyll update
 ---
 
-I am redoing the previous post.
+I am redoing the previous post in light of new findings.
 
 # Adding percentage sign
 
@@ -70,7 +70,7 @@ Field width of the maximum number in your data.
 )
 ```
 
-The result is as follows
+The result is as follows (*note: a newer version of the above code in the next post*).
 
 ```
 |  number | elx          |
@@ -83,12 +83,13 @@ The result is as follows
 #+TBLFM: $2='(string-elx $1 '(@1$1..@>$1));N
 ```
 
+
 ## Exporting to HTML
 
 Two more things:
 
 1. HTML deletes the whitespace as detailed [here](https://stackoverflow.com/questions/9356339/html-export-option-to-not-compress-multiple-spaces-in-emacs-org-mode ) and [here](https://www.w3.org/TR/CSS2/text.html#white-space-prop). The solution is to set the white-space property as pre-wrap
-2. You will want to use a monospaced font
+2. You will also need to use a monospaced font if you want the values to be aligned
 
 ``` elisp
 #+html_head: <style> table{font-family: monospace; white-space: pre-wrap } </style>
@@ -100,9 +101,10 @@ Two more things:
 
 ## Using org babel
 
-Now I'll do the same following a difference approach. The difference is in the input to the functions defined by `defun`.
-When using org tables, the range is a list, e.g. `'(1 2 etc)`.
-When using org babel, the elements are lists of lists, e.g. `'((1) (2) (etc))`.
+Now I'll do the same following a difference approach. The difference is in the input to the functions defined by `defun`. When using org tables, the range is a list, e.g. `'(1 2 etc)`. When using org babel, the elements are lists of lists, e.g. `'((1) (2) (etc))`.
+
+*Note: the code below mostly works but is not finalized.*
+
 
 ``` elisp
 (defun addcurrency(y)
