@@ -28,7 +28,7 @@ Yes, using `(require 'something)`. See the final results below
 
 For clarity, here are the formulas
 
-``` elisp
+```
 # Column Formulas
 $4 = '(get-greg "$3");L
 $5 = @1$2-$4
@@ -68,8 +68,7 @@ $6 = @+0$5-@+1$5
 The Hijri dates are usually off by a day or two. However, the date differences (calculated by the difference in Gregorian dates) should be consistent.
 
 
-In order to get the accurate date, you can use a simple table to construct a link to a website like islamicfinder, as below.
-
+In order to get the accurate date, you can use a simple table to construct a link to a website like islamicfinder, as below (the result is clickable link when you do this in org mode).
 
 ```
 |   | Year | Month    | Link                                                         |
