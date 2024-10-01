@@ -13,7 +13,7 @@ Click `C-h v org-file-apps` to modify this variable, and do the following change
 
 ```
 ("\\.pdf\\'" . system)
-("\\.docx\\'" . default)))
+("\\.docx\\'" . default)
 ```
 
 Next, you can get the link to the document by right-clicking it to create a shortcut, then go on its properties and copy the `Target` field. What you have is a link of the form 
